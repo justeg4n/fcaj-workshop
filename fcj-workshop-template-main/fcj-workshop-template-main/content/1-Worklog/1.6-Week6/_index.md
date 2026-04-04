@@ -1,57 +1,30 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-02-09
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 {{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+⚠️ **Note:** The following information is for reference purposes only.
 {{% /notice %}}
 
-
 ### Week 6 Objectives:
-
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master Serverless Analytics and Business Intelligence tools.
+* Participate in the Data Engineering Immersion Day materials.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 36  | - Data Engineering Immersion Day. <br> - Deep dive into modern data architectures. | 02/09/2026 | 02/09/2026 | AWS Immersion Day |
+| 37  | - Serverless Analytics with Amazon Athena. <br> - Query S3 Data Lake directly using standard SQL. | 02/10/2026 | 02/10/2026 | Amazon Athena |
+| 38  | - Optimize Amazon Athena queries using columnar data formats (Parquet) and partitioning. | 02/11/2026 | 02/11/2026 | FCJ Labs |
+| 39  | - Business Intelligence with Amazon QuickSight. <br> - Connect QuickSight to Athena and S3. | 02/12/2026 | 02/12/2026 | Amazon QuickSight |
+| 40  | - Practice: Build interactive dashboards and visualizations in QuickSight from raw datasets. | 02/13/2026 | 02/13/2026 | FCJ Labs |
+| 41  | - Explore QuickSight ML Insights (Forecasting and Anomaly Detection). | 02/14/2026 | 02/14/2026 | AWS Docs |
+| 42  | - End of week review. Combine S3, Glue, Athena, and QuickSight into a unified data pipeline. | 02/15/2026 | 02/15/2026 | Architecture Docs |
 
 ### Week 6 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully queried large, unstructured datasets stored in S3 using Amazon Athena without managing any servers.
+* Created comprehensive business intelligence dashboards using Amazon QuickSight.
+* Learned to optimize data querying costs by converting CSV files to Parquet format.

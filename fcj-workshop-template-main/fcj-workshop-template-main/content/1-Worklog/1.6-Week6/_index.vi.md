@@ -1,58 +1,30 @@
 ---
-title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc Tuần 6"
+date: 2026-02-09
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% notice warning %}} 
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo.
 {{% /notice %}}
 
+### Mục tiêu Tuần 6:
+* Thành thạo các công cụ phân tích Serverless và BI.
+* Thực hành tài liệu Data Engineering Immersion Day.
 
-### Mục tiêu tuần 6:
+### Các nhiệm vụ thực hiện trong tuần này:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 36 | - Data Engineering Immersion Day. <br> - Đi sâu vào các kiến trúc dữ liệu hiện đại. | 02/09/2026 | 02/09/2026 | AWS Immersion Day |
+| 37 | - Phân tích Serverless với Amazon Athena. <br> - Truy vấn S3 bằng SQL tiêu chuẩn. | 02/10/2026 | 02/10/2026 | Amazon Athena |
+| 38 | - Tối ưu hóa truy vấn Athena bằng định dạng Parquet và phân vùng. | 02/11/2026 | 02/11/2026 | FCJ Labs |
+| 39 | - Business Intelligence với Amazon QuickSight. <br> - Kết nối QuickSight với Athena và S3. | 02/12/2026 | 02/12/2026 | Amazon QuickSight |
+| 40 | - Thực hành: Xây dựng dashboard trực quan từ các tập dữ liệu thô. | 02/13/2026 | 02/13/2026 | FCJ Labs |
+| 41 | - Khám phá QuickSight ML Insights (Dự báo và phát hiện bất thường). | 02/14/2026 | 02/14/2026 | AWS Docs |
+| 42 | - Ôn tập: Kết hợp S3, Glue, Athena và QuickSight thành pipeline hoàn chỉnh. | 02/15/2026 | 02/15/2026 | Kiến trúc dữ liệu |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### Thành quả Tuần 6:
+* Truy vấn dữ liệu phi cấu trúc trên S3 bằng Athena mà không cần quản lý máy chủ.
+* Tạo dashboard BI chuyên nghiệp bằng QuickSight.
+* Tối ưu chi phí lưu trữ và truy vấn bằng cách chuyển đổi sang định dạng Parquet.

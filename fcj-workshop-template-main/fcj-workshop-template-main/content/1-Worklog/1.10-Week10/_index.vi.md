@@ -1,59 +1,29 @@
 ---
-title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+title: "Nhật ký công việc Tuần 10"
+date: 2026-03-09
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% notice warning %}} 
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo.
 {{% /notice %}}
 
+### Mục tiêu Tuần 10:
+* Giải quyết các vấn đề truy cập chéo vùng của Bedrock.
+* Triển khai kiến trúc hướng sự kiện hoàn chỉnh cho giai đoạn phân tích CV.
 
-### Mục tiêu tuần 10:
+### Các nhiệm vụ thực hiện trong tuần này:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 64 | - Debug lỗi `ThrottlingException` của Bedrock bằng cơ chế exponential backoff. | 03/09/2026 | 03/09/2026 | Boto3 Config |
+| 65 | - Xử lý lỗi đăng ký Marketplace cho Claude 3.5 Sonnet v2 với tài khoản Root. | 03/10/2026 | 03/10/2026 | AWS Bedrock |
+| 66 | - Cấu hình Cross-Region Inference để gọi mô hình US từ Region Singapore. | 03/11/2026 | 03/11/2026 | AWS Blog |
+| 67 | - Xử lý phân trang trong Textract cho các CV nhiều trang bằng `NextToken`. | 03/12/2026 | 03/12/2026 | Textract API |
+| 68 | - Tối ưu chi phí: Gộp việc phân tích CV và so khớp JD vào một lần gọi AI duy nhất. | 03/13/2026 | 03/13/2026 | Prompt Eng |
+| 69 | - Thiết kế JSON schema trao đổi dữ liệu giữa Backend và Lambda qua SQS. | 03/14/2026 | 03/14/2026 | JSON Spec |
+| 70 | - Ôn tập Tuần 10: Trình diễn pipeline SQS -> Lambda -> Bedrock hoạt động ổn định. | 03/15/2026 | 03/15/2026 | Demo |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 10:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### Thành quả Tuần 10:
+* Giải quyết triệt để vấn đề giới hạn vùng của Bedrock bằng Cross-Region Inference.
+* Xây dựng pipeline hướng sự kiện ổn định: SQS -> Lambda -> Textract -> Bedrock.

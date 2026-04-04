@@ -1,59 +1,29 @@
 ---
-title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc Tuần 5"
+date: 2026-02-02
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% notice warning %}} 
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo.
 {{% /notice %}}
 
+### Mục tiêu Tuần 5:
+* Bắt đầu lộ trình Data Engineering.
+* Hiểu các khái niệm cốt lõi về xây dựng và quản lý Data Lake trên AWS.
 
-### Mục tiêu tuần 5:
+### Các nhiệm vụ thực hiện trong tuần này:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 29 | - Tổng quan về các dịch vụ phân tích dữ liệu trên AWS. | 02/02/2026 | 02/02/2026 | AWS Analytics Guide |
+| 30 | - Nền tảng Data Lake trên AWS. <br> - Phân biệt Data Lake và Data Warehouse. | 02/03/2026 | 02/03/2026 | FCJ Portal |
+| 31 | - Xây dựng Data Lake với dữ liệu riêng. <br> - Sử dụng Amazon S3 làm lớp lưu trữ trung tâm. | 02/04/2026 | 02/04/2026 | AWS Lake Formation |
+| 32 | - Giới thiệu về AWS Glue: Crawlers và Data Catalogs. | 02/05/2026 | 02/05/2026 | AWS Glue Docs |
+| 33 | - Thực hành: Quy trình ETL đơn giản bằng AWS Glue. | 02/06/2026 | 02/06/2026 | FCJ Labs |
+| 34 | - Khái niệm về Business Intelligence và Phân tích dữ liệu. | 02/07/2026 | 02/07/2026 | FCJ Portal |
+| 35 | - Ôn tập: Hoàn thiện cấu trúc Data Lake và chiến lược phân vùng. | 02/08/2026 | 02/08/2026 | Tự học |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### Thành quả Tuần 5:
+* Hiểu rõ kiến trúc Data Lake trên S3.
+* Cấu hình thành công AWS Glue Crawler để tự động khám phá lược đồ dữ liệu.

@@ -1,59 +1,29 @@
 ---
-title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc Tuần 4"
+date: 2026-01-26
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% notice warning %}} 
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo.
 {{% /notice %}}
 
+### Mục tiêu Tuần 4:
+* Hoàn thiện ý tưởng dự án Capstone trước kỳ nghỉ Tết.
+* Tìm hiểu về Hosting trang web tĩnh và mạng phân phối nội dung (CDN).
 
-### Mục tiêu tuần 4:
+### Các nhiệm vụ thực hiện trong tuần này:
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| 22 | - Host trang web tĩnh với Amazon S3. <br> - Cấu hình S3 Bucket Policies cho quyền truy cập công khai. | 01/26/2026 | 01/26/2026 | AWS S3 Guide |
+| 23 | - Phân phối nội dung với Amazon CloudFront. <br> - Gắn CloudFront vào S3 origin. | 01/27/2026 | 01/27/2026 | AWS CloudFront |
+| 24 | - Edge Computing: Giới thiệu về CloudFront và Lambda@Edge. | 01/28/2026 | 01/28/2026 | FCJ Portal |
+| 25 | - **Giai đoạn ý tưởng:** Brainstorm chủ đề Capstone. <br> - Phác thảo Đề xuất 1: *Logistics SmartWareHouse*. | 01/29/2026 | 01/29/2026 | Họp nhóm |
+| 26 | - **Giai đoạn ý tưởng:** Phác thảo Đề xuất 2: *InterviewSyncAI*. <br> - Đánh giá tính khả thi kỹ thuật trên AWS. | 01/30/2026 | 01/30/2026 | Tài liệu kiến trúc |
+| 27 | - Quản lý DNS với Amazon Route 53. <br> - Ánh xạ tên miền tùy chỉnh vào CloudFront. | 01/31/2026 | 01/31/2026 | AWS Route 53 |
+| 28 | - Ôn tập cuối cùng. Chốt ý tưởng phỏng vấn AI để chuẩn bị phát triển. | 02/01/2026 | 02/01/2026 | Tự học |
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 4:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### Thành quả Tuần 4:
+* Host thành công trang web React trên S3 kết hợp CloudFront.
+* Hoàn thành lựa chọn dự án Capstone, tập trung vào nền tảng phỏng vấn AI (sau này là SmartHireAI).

@@ -1,57 +1,30 @@
 ---
 title: "Week 11 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-03-16
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 {{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+⚠️ **Note:** The following information is for reference purposes only.
 {{% /notice %}}
 
-
 ### Week 11 Objectives:
-
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Fully integrate the Job Suggestion and Candidate Ranking Engines into the production pipeline.
+* Fine-tune the Hybrid Matching algorithm (Bi-Encoder + Cross-Encoder) for maximum precision.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 71 | - Integrate `JobSuggestionEngine` and `CandidateRankingEngine` into the Step Functions workflow. | 03/16/2026 | 03/16/2026 | System Architecture |
+| 72 | - Implement Hybrid Scoring logic: 35% Bi-Encoder (Cohere) and 65% Cross-Encoder (MiniLM). | 03/17/2026 | 03/17/2026 | cv_jd_processor.py |
+| 73 | - Configure AppSync Notifiers to push real-time ranking and suggestion updates to the frontend. | 03/18/2026 | 03/18/2026 | appsync_notifier.py |
+| 74 | - Refine Step Functions state machine to the unified 3-step architecture: Processor -> Choice -> Engine. | 03/19/2026 | 03/19/2026 | AWS Step Functions |
+| 75 | - Optimize pgvector queries by implementing IVFFlat indexing for faster high-cardinality searches. | 03/20/2026 | 03/20/2026 | pgvector Docs |
+| 76 | - Build a Lambda Layer for the Cross-Encoder model to reduce cold-start latency in the matching engines. | 03/21/2026 | 03/21/2026 | Lambda Best Practices |
+| 77 | - Conduct end-to-end system testing to ensure bi-directional matching accuracy. | 03/22/2026 | 03/22/2026 | Internal Testing |
 
 ### Week 11 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed the transition to the Unified Pipeline v3.0, significantly reducing processing latency by merging Lambda functions.
+* Successfully implemented a real-time notification layer using AppSync, allowing users to see match results instantly after processing.
+* Stabilized the hybrid ranking algorithm, providing a robust balance between broad semantic search and deep contextual precision.
