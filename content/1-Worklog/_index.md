@@ -1,30 +1,41 @@
 ---
-title: "Week 12 Worklog"
-date: 2026-03-23
-weight: 12
+title: "Worklog"
+date: 2026-01-05
+weight: 1
 chapter: false
-pre: " <b> 1.12. </b> "
+pre: " <b> 1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only.
+
+{{% notice warning %}}
+⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-### Week 12 Objectives:
-* Establish comprehensive system observability and performance monitoring.
-* Finalize all technical documentation and prepare the project for final submission.
+**On this page**, I introduce the comprehensive worklog of my 12-week internship program at FPT Cloud Journey (FCJ). This log tracks my progression from mastering core AWS cloud infrastructure to architecting and deploying **SmartHireAI**, a GenAI-driven recruitment platform.
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | --- | --- | --- | --- |
-| 78 | - Deploy AWS X-Ray for end-to-end tracing across the asynchronous AI pipeline. | 03/23/2026 | 03/23/2026 | AWS X-Ray Guide |
-| 79 | - Finalize Infrastructure as Code (IaC) using Terraform for all processing modules and SQS queues. | 03/24/2026 | 03/24/2026 | Terraform Config |
-| 80 | - Document detailed I/O schemas for Lambda functions and relational/NoSQL data models. | 03/25/2026 | 03/25/2026 | Technical Docs |
-| 81 | - Perform cost optimization: Configure S3 Lifecycle rules and dọn dẹp unused AWS resources. | 03/26/2026 | 03/26/2026 | AWS Cost Explorer |
-| 82 | - Record a comprehensive product demo video showcasing the SmartHireAI bi-directional flow. | 03/27/2026 | 03/27/2026 | Demo Video |
-| 83 | - Consolidate project KPIs, including MTTR improvements and AI parsing accuracy metrics. | 03/28/2026 | 03/28/2026 | Project Report |
-| 84 | - Final review of the internship report and submission to the FCJ Portal. | 03/29/2026 | 03/29/2026 | FCJ Submission |
+I completed this program over **12 weeks**, divided into foundational cloud training and a focused Capstone Project development phase. The journey involved hands-on labs, AWS Immersion Days, and the implementation of advanced serverless and AI architectures.
 
-### Week 12 Achievements:
-* Achieved full system observability with AWS X-Ray, providing clear visibility into Step Functions and Lambda performance.
-* Successfully codified the entire backend infrastructure using Terraform, ensuring reproducible deployments.
-* Completed the 12-week internship with a production-ready GenAI platform capable of real-time candidate-to-job matching.
+The weekly progress is summarized as follows:
+
+**Week 1:** [Getting familiar with AWS and core infrastructure (IAM, VPC, Budgets)](1.1-week1/)
+
+**Week 2:** [Mastering RDS, Auto Scaling, and application monitoring](1.2-week2/)
+
+**Week 3:** [NoSQL databases with DynamoDB and High Availability architectures](1.3-week3/)
+
+**Week 4:** [Content delivery via CloudFront and SmartHireAI project ideation](1.4-week4/)
+
+**Week 5:** [Data Engineering track: Building Data Lakes with AWS Glue and S3](1.5-week5/)
+
+**Week 6:** [Serverless Analytics with Athena and BI dashboards in QuickSight](1.6-week6/)
+
+**Week 7:** [Advanced Database scaling and AWS SageMaker ML Immersion](1.7-week7/)
+
+**Week 8:** [SmartHireAI Development: Database ERD and pgvector integration](1.8-week8/)
+
+**Week 9:** [Building the Serverless CV Parsing pipeline (SQS, Textract, Bedrock)](1.9-week9/)
+
+**Week 10:** [Optimizing Bedrock with Cross-Region Inference and Event-Driven logic](1.10-week10/)
+
+**Week 11:** [System Integration: Hybrid Matching Engines and AppSync notifications](1.11-week11/)
+
+**Week 12:** [Finalization: Observability with X-Ray and IaC with Terraform](1.12-week12/)
