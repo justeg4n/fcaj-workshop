@@ -1,6 +1,10 @@
 ---
 title: "Internship Report"
+<<<<<<< HEAD
 date: 2024-01-01
+=======
+date: 2026-01-05
+>>>>>>> ed17fed27c55804e764aafb8a979a812b347a0b8
 weight: 1
 chapter: false
 ---
@@ -31,7 +35,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 01/05/2026 to 04/05/2026
 
-![Your profile picture](C:\Users\QUOC ANH\OneDrive\Pictures\aa.jpg)
+![Your profile picture]("C:\Users\QUOC ANH\OneDrive\Pictures\aa.jpg")
 
 ### Report Content
 
