@@ -1,232 +1,202 @@
 ---
-title: "Bản đề xuất"
-date: 2026-01-05
-weight: 2
+title: "Đề xuất Dự án"
+weight: 1
 chapter: false
-pre: " <b> 2. </b> "
 ---
 
-# SmartHire AI — Nền tảng Tuyển dụng Kỹ thuật được Hỗ trợ bởi AI
-## Hệ thống Đối sánh Hai chiều Serverless trên AWS cho Quy trình Tuyển dụng Hiện đại
-
-### 1. Tóm tắt điều hành
-
-SmartHire AI là nền tảng tuyển dụng kỹ thuật end-to-end được hỗ trợ bởi AI, xây dựng hoàn toàn trên hạ tầng serverless của AWS. Hệ thống tự động hóa các bước tốn thời gian nhất trong quy trình tuyển dụng — sàng lọc CV, đối sánh ứng viên-việc làm và tạo câu hỏi phỏng vấn — thông qua pipeline AI đa tầng.
-
-Nền tảng triển khai **đối sánh hai chiều**: khi ứng viên tải CV lên, hệ thống tự động gợi ý những công việc phù hợp nhất. Khi nhà tuyển dụng đăng mô tả công việc, hệ thống ngay lập tức xếp hạng các ứng viên phù hợp nhất từ pool nhân tài hiện có. Cả hai luồng đều được điều khiển bởi engine chấm điểm AI lai kết hợp Cohere Embed v3 (tìm kiếm vector ngữ nghĩa) và Cross-Encoder reranker (ms-marco-MiniLM-L-6-v2), với Amazon Bedrock Claude 3.5 Sonnet tạo ra các giải thích, hướng dẫn phỏng vấn và báo cáo tổng hợp dễ đọc.
-
-Nhóm gồm 5 thành viên — 2 Backend (.NET 8 / AWS Lambda), 2 Frontend (ReactJS / WebSocket), và 1 AI Engineer (Python / Bedrock / pgvector) — vận hành trên stack AWS serverless hoàn toàn với chi phí máy chủ cố định bằng không.
-
----
-
-### 2. Tuyên bố vấn đề
-
-#### Vấn đề hiện tại là gì?
-
-Tuyển dụng kỹ thuật tốn kém và thiếu nhất quán. Nhà tuyển dụng tại các công ty vừa và nhỏ phải mất 3–5 giờ mỗi ứng viên chỉ để sàng lọc thủ công trước khi tiến hành phỏng vấn. Ứng viên không nhận được phản hồi có cấu trúc. Các nền tảng hiện có (HackerRank, Greenhouse, LinkedIn Recruiter) hoặc quá đắt cho các nhóm nhỏ, hoặc không cung cấp đánh giá AI thực sự — chúng chỉ kiểm tra code có biên dịch được không, chứ không đánh giá ứng viên có thực sự hiểu những gì họ xây dựng hay không.
-
-Ba khoảng trống cụ thể tồn tại trong thị trường hiện tại:
-
-1. **Từ vựng bất đối xứng**: Ngôn ngữ CV ("thiết kế các cluster có tính sẵn sàng cao") và ngôn ngữ JD ("yêu cầu kinh nghiệm AWS EC2") có cùng nghĩa nhưng các hệ thống đơn giản lại nhúng chúng vào các vùng vector khác nhau. Cosine similarity thuần túy thất bại ở đây.
-2. **Thiếu tính hai chiều**: Hầu hết các nền tảng chỉ đối sánh một CV với một JD theo yêu cầu. Không có hệ thống nào chủ động gợi ý "bạn nên xem ứng viên này" với nhà tuyển dụng ngay khi JD mới được đăng.
-3. **Rủi ro thiên kiến**: Các hệ thống AI xử lý văn bản CV thô có thể vô tình ưu tiên tên gọi, trường đại học và quốc tịch. Không có công cụ tuyển dụng chủ lưu nào giải quyết điều này bằng cách ẩn PII tự động.
-
-#### Giải pháp
-
-SmartHire AI giải quyết cả ba khoảng trống:
-
-- **Engine chấm điểm lai** (Bi-Encoder + Cross-Encoder) thu hẹp khoảng cách từ vựng với trọng số 65% cho Cross-Encoder, vốn xử lý CV và JD đồng thời qua attention của transformer thay vì so sánh các embedding độc lập.
-- **Pipeline hai chiều** đảm bảo cả CV mới tải lên và JD mới đăng đều kích hoạt các lần chạy đối sánh tự động theo chiều ngược lại, lưu ngay vào DynamoDB và đẩy đến người dùng liên quan qua WebSocket AppSync.
-- **Module sàng lọc mù** (spaCy NER) chạy trước khi bất kỳ mô hình AI nào nhìn thấy văn bản CV, thay thế các thực thể PERSON, ORG, GPE và NORP bằng các token trung lập, đảm bảo mọi điểm số đều dựa thuần túy trên năng lực kỹ thuật.
-
-#### Lợi ích và hoàn vốn đầu tư
-
-| Chỉ số | Tình trạng hiện tại | Với SmartHire AI |
-|---|---|---|
-| Thời gian sàng lọc của nhà tuyển dụng/ứng viên | 3–5 giờ | ~15 phút (đọc tóm tắt AI) |
-| Tính nhất quán đánh giá | Tùy thuộc nhà tuyển dụng | Điểm STAR chuẩn hóa |
-| Phản hồi cho ứng viên | Không có | Bảng điểm có phân tích kỹ năng còn thiếu |
-| Chi phí vận hành nền tảng | Phí cố định | $0 khi không có lưu lượng (100% serverless) |
-
-Chi phí vận hành ước tính khoảng **$0.08 mỗi phiên xử lý CV** (gọi Bedrock Claude + Cohere embeddings + Textract). Không có chi phí máy chủ cố định. Nền tảng được xây dựng hoàn toàn với các dịch vụ AWS đủ điều kiện Free Tier cho môi trường phát triển và chi phí tăng tuyến tính chỉ theo mức sử dụng thực tế trong production.
-
----
-
-### 3. Kiến trúc giải pháp
-
-Nền tảng được chia thành hai luồng chính chia sẻ một Lambda xử lý AI chung:
-
-**Luồng Ứng viên**: Trình duyệt → Route 53 → CloudFront → S3 Frontend | Ứng viên tải CV (presigned URL) → S3 → SQS → IngestionTrigger Lambda → Step Functions → `cv_jd_processor` Lambda → Routing Choice → `JobSuggestionEngine` Lambda → DynamoDB + AppSync push
-
-**Luồng Nhà tuyển dụng**: Trình duyệt → Route 53 → WAF → API Gateway → Cognito → Job Lambda (.NET) → Step Functions → `cv_jd_processor` Lambda → Routing Choice → `CandidateRankingEngine` Lambda → DynamoDB + AppSync push
-
-Cả hai luồng hội tụ trong Step Functions và phân kỳ tại Choice State dựa trên `profile_id`.
-
-![Kiến trúc SmartHire AI — Luồng Ứng viên và Nhà tuyển dụng](/images/2-Proposal/architecture_overview.png)
-
-![SmartHire AI — Chi tiết Pipeline AI (cv_jd_processor → Engines)](/images/2-Proposal/ai_pipeline_detail.png)
-
-#### Dịch vụ AWS sử dụng
-
-| Dịch vụ | Vai trò |
-|---|---|
-| **Amazon Route 53** | DNS cho cả hai subdomain `app.` và `api.` |
-| **Amazon CloudFront + ACM** | CDN cho React SPA, chứng chỉ HTTPS |
-| **AWS WAF** | Gắn vào API Gateway — lọc SQLi, XSS, giới hạn tốc độ |
-| **Amazon API Gateway** | Endpoint REST + WebSocket |
-| **Amazon Cognito** | Xác thực JWT cho mọi lệnh gọi API |
-| **AWS Step Functions** | Điều phối pipeline xử lý CV/JD |
-| **AWS Lambda (.NET 8)** | Auth Service, Job Service, Stream Master |
-| **AWS Lambda (Python)** | IngestionTrigger, cv_jd_processor, JobSuggestionEngine, CandidateRankingEngine |
-| **Amazon SQS** | `cv-upload-queue` — tách rời S3 events khỏi Lambda |
-| **Amazon S3** | CV Bucket (presigned uploads), lưu trữ Frontend, lưu trữ Reports |
-| **Amazon RDS PostgreSQL** | Nguồn dữ liệu chính — Users, Jobs, Applications, pgvector embeddings |
-| **Amazon RDS Proxy** | Connection pooling cho Lambda → RDS |
-| **Amazon ElastiCache Redis** | Cache hot-read, trạng thái phiên |
-| **Amazon DynamoDB** | Hot store — JOB_SUGGESTIONS, CANDIDATE_RANKING, đọc thời gian thực |
-| **Amazon Bedrock (Claude 3.5 Sonnet)** | Agent 1: trích xuất kỹ năng · Agent 2: hướng dẫn phỏng vấn · Agent 3: giải thích |
-| **Amazon Bedrock (Cohere Embed v3)** | Embedding 1024-dim — `search_document` để lưu trữ, `search_query` cho ANN |
-| **Amazon Textract** | Trích xuất văn bản PDF không đồng bộ từ file CV |
-| **Amazon AppSync** | GraphQL + WebSocket push đến cả hai người dùng |
-| **Amazon SNS + SES** | Thông báo email khi kết quả sẵn sàng |
-| **AWS NAT Gateway** | Lambda trong private-subnet gọi ra ngoài đến Bedrock, Textract, SNS, SES |
-| **AWS VPC Endpoint** | Truy cập DynamoDB — lưu lượng ở lại trong backbone AWS |
-| **AWS Secrets Manager** | Mọi API key, thông tin đăng nhập RDS — không có secret được hardcode |
-| **AWS KMS** | Mã hóa cho S3 recordings và các trường DynamoDB nhạy cảm |
-| **Amazon CloudWatch + X-Ray** | Tracing end-to-end, metrics Lambda, dashboard tùy chỉnh |
-| **AWS IAM** | Role tối thiểu quyền cho mỗi Lambda và Step Functions state |
-
-#### Thiết kế thành phần Pipeline AI
-
-Chuỗi xử lý AI cốt lõi bên trong `cv_jd_processor` chạy các bước này theo thứ tự, tất cả qua NAT Gateway đến Bedrock:
-
-1. **Amazon Textract** — trích xuất văn bản PDF không đồng bộ
-2. **spaCy NER (local, bên trong Lambda)** — ẩn PII trước khi bất kỳ mô hình AI nào nhìn thấy văn bản
-3. **Claude 3.5 Sonnet — Agent 1** — trích xuất kỹ năng có cấu trúc (JSON), `temperature=0.0`
-4. **Claude 3.5 Sonnet — Agent 2** — tạo hướng dẫn phỏng vấn từ các kỹ năng còn thiếu, `temperature=0.3`
-5. **Cohere Embed v3** — embedding `search_document` → lưu vào RDS pgvector
-6. **Cross-Encoder ms-marco-MiniLM-L-6-v2 (local, baked vào container)** — xếp hạng lại top-N ứng viên/việc làm
-7. **Claude 3.5 Sonnet — Agent 3** — giải thích đối sánh hoặc snapshot ứng viên, `temperature=0.4`
-
----
-
-### 4. Triển khai kỹ thuật
-
-#### Các giai đoạn triển khai
-
-Dự án theo 4 giai đoạn trong 13 tuần:
-
-**Giai đoạn 1 — Nền tảng (Tuần 1–2):**
-Thiết lập tài khoản AWS, IAM roles, Cognito, CI/CD pipeline (GitHub Actions → SAM deploy), scaffold React + Tailwind, CloudFront + S3 hosting, kiểm tra WebSocket API Gateway.
-
-**Giai đoạn 2 — Pipeline cốt lõi (Tuần 3–6):**
-Định nghĩa Step Functions workflow, Lambda `cv_jd_processor` với Textract + Claude Agent 1, Cohere embed + lưu RDS pgvector, kết nối SQS → IngestionTrigger → Step Functions, luồng upload presigned URL.
-
-**Giai đoạn 3 — AI Engines + Đối sánh hai chiều (Tuần 7–10):**
-`JobSuggestionEngine` (ANN + Cross-Encoder + Claude Agent 3 cho giải thích đối sánh), `CandidateRankingEngine` (tương tự cho phía nhà tuyển dụng), AppSync mutations, ghi DynamoDB hot store, thông báo SNS/SES.
-
-**Giai đoạn 4 — Hiệu chỉnh điểm số, Kiểm thử, Demo (Tuần 11–13):**
-Hiệu chỉnh điểm số 5 bước (sửa L2→cosine, calibrated sigmoid, unified aggregation, chunk lớn hơn, tinh chỉnh hybrid weights), đồng bộ giải thích nhận biết điểm số, kiểm tra replay với dữ liệu production, lập kịch bản demo (hai persona ứng viên: mạnh vs yếu), kiểm thử tích hợp cuối.
-
-#### Tuần 12 — Deliverables của AI Engineer (Tuần hiện tại)
-
-- **Bước 1:** Sửa công thức bi-score — thay đổi toán tử SQL từ `<->` (L2) sang `<=>` (cosine distance) trong cả `JobSuggestionEngine` và `CandidateRankingEngine`. Cập nhật chuyển đổi điểm số từ ánh xạ L2 tuyến tính sang `(1 - cosine_distance) * 100`. Kết quả mong đợi: Technical Lead biScore tăng từ ~44 lên ~68–75.
-- **Bước 2:** Thay `_sigmoid` thô bằng `_calibrated_sigmoid(shift=-1.0, scale=1.5)` trong cả ba Lambda. Kết quả mong đợi: crossScore cho các đối sánh liên quan tăng từ ~38 lên ~62–72.
-- **Bước 3:** Thống nhất chiến lược tổng hợp — thay thế max pooling trong `JobSuggestionEngine` bằng `_aggregate_chunk_scores([0.55, 0.30, 0.15])` để nhất quán với hai Lambda kia.
-- **Phase 1A:** Cập nhật `generate_match_explanation` và `generate_candidate_snapshot` để nhận `final_score` và đưa vào Claude prompt một chỉ thị về tông giọng (ánh xạ theo bậc mạnh/trung bình/yếu).
-
-#### Tuần 13 — Deliverables của AI Engineer (Tuần cuối)
-
-- **Bước 4:** Tăng kích thước input cho cross-encoder qua env vars: `CE_JD_QUERY_CHARS=2500`, `CE_CHUNK_CHARS=1200`, `CE_OVERLAP_CHARS=200`, `CE_MAX_CHUNKS=6`.
-- **Bước 5:** Tinh chỉnh hybrid weights dựa trên kết quả quan sát từ Bước 1–4. Điều chỉnh `SUGGESTION_WEIGHT_BI` và `SUGGESTION_WEIGHT_CROSS` trong biến môi trường Lambda mà không cần deploy code.
-- **Phase 1C:** Triển khai logging có cấu trúc CloudWatch: ghi lại `biScore`, `crossScore`, `finalScore`, `threshold_pass`, `scorer_mode` và `explanation_mode` cho mỗi lần xử lý.
-- **Chuẩn bị Demo:** Lập kịch bản hai persona ứng viên cho Demo Day — Persona A (mạnh, điểm ≥80) và Persona B (yếu, điểm ≤42) — và xác minh tông giọng giải thích được hiệu chỉnh chính xác cho từng trường hợp.
-- **Tài liệu:** Cập nhật `architecture-smart-matching.md` với số thứ tự luồng cuối cùng, chuỗi gọi mô hình AI và bảng tham chiếu biến môi trường.
-
-#### Yêu cầu kỹ thuật
-
-**Stack AI Engineer:**
-- Python 3.11, `sentence-transformers`, `spacy`, `pg8000`, `boto3`
-- Triển khai container image (Lambda) — cross-encoder được baked tại thời điểm build vào `/opt/ml/cross_encoder`
-- AWS Bedrock API (Claude 3.5 Sonnet APAC endpoint, Cohere Embed v3)
-- pgvector với index `vector_cosine_ops` trên `candidate_embeddings` và `job_embeddings`
-- Step Functions Express Workflows, SQS DLQ, EventBridge routing
-
----
-
-### 5. Lộ trình & Mốc triển khai
-
-| Thời gian | Mốc |
-|---|---|
-| Tuần 1–2 | Nền tảng: tài khoản AWS, CI/CD, scaffold frontend, WebSocket API Gateway |
-| Tuần 3–4 | CV ingestion: S3 → SQS → IngestionTrigger → Step Functions → Textract |
-| Tuần 5–6 | Claude Agent 1 + Cohere embed + pgvector storage |
-| Tuần 7–8 | JobSuggestionEngine + CandidateRankingEngine (ANN + Cross-Encoder) |
-| Tuần 9–10 | Claude Agent 3 + AppSync push + DynamoDB hot store |
-| Tuần 11 | Kiểm thử tích hợp, đo baseline điểm số |
-| **Tuần 12** | **Hiệu chỉnh điểm số Bước 1–3 + Phase 1A (giải thích nhận biết điểm số)** |
-| **Tuần 13** | **Bước 4–5 + Phase 1C telemetry + chuẩn bị demo + tài liệu** |
-
----
-
-### 6. Ước tính ngân sách
-
-Tất cả chi phí dưới đây được ước tính cho môi trường phát triển/demo (lưu lượng thấp). Chi phí production tăng tuyến tính theo mức sử dụng — hệ thống tốn $0 khi không có lưu lượng.
-
-| Dịch vụ | Chi phí/Tháng (Dev) | Ghi chú |
-|---|---|---|
-| AWS Lambda | $0.00 | Free tier đủ cho mọi lần gọi dev |
-| Amazon S3 | $0.05 | CV bucket + lưu trữ reports |
-| Amazon DynamoDB | $0.00 | On-demand, free tier |
-| Amazon RDS PostgreSQL (Multi-AZ) | $0.00 | Instance dev — t3.micro free tier |
-| Amazon Bedrock (Claude 3.5 Sonnet) | ~$0.30 | ~50 phiên xử lý CV/tháng |
-| Amazon Bedrock (Cohere Embed v3) | ~$0.05 | ~200 lần gọi embedding/tháng |
-| Amazon Textract | ~$0.08 | ~50 file CV/tháng |
-| AWS Step Functions | $0.00 | Free tier — 4.000 state transitions |
-| Amazon SQS | $0.00 | Free tier |
-| Amazon API Gateway | $0.01 | ~2.000 requests |
-| Amazon CloudFront | $0.00 | Free tier |
-| Amazon AppSync | $0.01 | ~2.000 kết nối |
-| Amazon SNS + SES | $0.00 | Free tier |
-| NAT Gateway | ~$0.05 | Dev — lưu lượng data thấp |
-
-**Tổng: ~$0.55/tháng (phát triển) · ~$0.08/phiên CV (chi phí xử lý AI)**
-
-Phần cứng: Không cần phần cứng bổ sung. Mọi xử lý đều là cloud-native.
-
----
-
-### 7. Đánh giá rủi ro
-
-#### Ma trận rủi ro
-
-| Rủi ro | Ảnh hưởng | Xác suất | Biện pháp giảm thiểu |
-|---|---|---|---|
-| Bedrock throttling dưới tải | Cao | Trung bình | Adaptive retry config (tối đa 10 lần), SQS làm buffer |
-| Cross-encoder cold start (Lambda) | Trung bình | Cao | Bake model vào container image lúc build — loại bỏ download lúc cold start |
-| Không khớp loại index pgvector (L2 vs cosine) | Cao | Thấp | Xác minh index bằng query `pg_indexes` trước khi deploy Bước 1 |
-| Giải thích điểm thấp nhưng text tích cực | Trung bình | Cao | Phase 1A: đưa `final_score` + chỉ thị tông giọng vào mỗi prompt Claude Agent 3 |
-| Vượt chi phí Bedrock | Thấp | Thấp | AWS Budget alert ở $5/tháng; feature flag `ENABLE_CROSS_ENCODER=false` |
-| RDS connection exhaustion | Cao | Trung bình | RDS Proxy xử lý pooling; read replica cho các query báo cáo |
-
-#### Kế hoạch dự phòng
-
-- Nếu Bedrock không khả dụng: fallback về bi-encoder only (đường dẫn `cross_score=None` đã được triển khai).
-- Nếu ANN pgvector không trả về kết quả: hiển thị thông báo "Chưa có kết quả phù hợp — hãy kiểm tra lại sau khi thêm ứng viên".
-- Sử dụng AWS CloudFormation/SAM để khôi phục mọi cấu hình Lambda từ IaC trong dưới 10 phút.
-
----
-
-### 8. Kết quả kỳ vọng
-
-#### Deliverables kỹ thuật
-
-- Pipeline đối sánh serverless được triển khai đầy đủ với hiệu chỉnh điểm số có thể đo lường: **Technical Lead finalScore ≥ 70%, Sustainability Intern finalScore ≤ 35%, chênh lệch ≥ 30 điểm** giữa đối sánh tốt nhất và kém nhất.
-- Đối sánh hai chiều thời gian thực với AppSync WebSocket push — kết quả được giao trong vòng 90 giây sau khi tải CV.
-- Sàng lọc mù (spaCy NER) áp dụng trước khi bất kỳ mô hình AI nào nhìn thấy văn bản CV.
-- Hướng dẫn phỏng vấn có cấu trúc (3 câu hỏi mỗi ứng viên) được tạo tự động và lưu trong DynamoDB.
-- Khả năng quan sát đầy đủ: X-Ray traces, CloudWatch custom dashboards, structured JSON logs mỗi lần xử lý.
-
-#### Giá trị dài hạn
-
-Kiến trúc có thể tái sử dụng cho bất kỳ trường hợp đối sánh tài liệu nào (xem xét hợp đồng pháp lý, đối sánh bài báo học thuật, căn chỉnh thông số sản phẩm). Pool nhân tài pgvector và engine hai chiều có thể đóng vai trò nền tảng cho một sản phẩm SaaS tuyển dụng cấp production. Phương pháp hiệu chỉnh điểm số (kế hoạch 5 bước: sửa cosine → calibrated sigmoid → unified aggregation → chunk lớn hơn → tinh chỉnh weights) được ghi chép và có thể chuyển giao cho bất kỳ hệ thống hybrid retrieval trong tương lai nào xây dựng trên Bedrock + pgvector.
+# Đề xuất (Proposal)
+Phần này tóm tắt dự án/workshop dự kiến cho **SmartHire-AI**, được điều chỉnh phù hợp với cơ sở hạ tầng đã được định nghĩa bằng Terraform trong repository này.
+
+## SmartHire-AI
+**Nền tảng Tuyển dụng Thông minh trên AWS (Serverless + IaC)**
+
+### 1. Tóm tắt dự án (Executive Summary)
+SmartHire-AI được thiết kế dành cho cả ứng viên và nhà tuyển dụng. Ứng viên tải CV (định dạng PDF) lên object storage; hệ thống trích xuất văn bản, làm giàu dữ liệu bằng AI (Amazon Bedrock, Amazon Textract, Amazon Comprehend), lưu trữ trạng thái phân tích và kết quả, sau đó tạo ra các đề xuất công việc hoặc xếp hạng ứng viên.
+
+Đối với **luồng JD (Mô tả công việc)**, nội dung được đọc trực tiếp từ cơ sở dữ liệu quan hệ (Amazon RDS PostgreSQL) bởi backend **.NET 8**, backend này sẽ trực tiếp khởi chạy AWS Step Functions khi có sự kiện tạo mới/cập nhật JD. Điều này loại bỏ sự phụ thuộc vào việc phải tải file JD lên S3 cho luồng này.
+
+Web client (SPA) được phân phối qua **Amazon CloudFront + Amazon S3**; việc xác thực được xử lý bởi **Amazon Cognito** (bao gồm cả đăng nhập bằng Google); và các bản cập nhật thời gian thực (near real-time) cho client được phân phối thông qua **AWS AppSync** (GraphQL subscriptions). Toàn bộ môi trường được mô tả dưới dạng mã nguồn bằng **Terraform** (VPC, RDS, Cognito, luồng xử lý, X-Ray tracing, CI/CD, v.v.).
+
+### 2. Phát biểu bài toán (Problem Statement)
+**Vấn đề là gì?**
+Việc sàng lọc CV và đối chiếu JD thủ công không thể mở rộng khi số lượng hồ sơ và tin tuyển dụng tăng lên. Các team thường thiếu một luồng xử lý (pipeline) thống nhất để trích xuất, lưu trữ và đề xuất; người dùng cũng cần phản hồi gần như theo thời gian thực thay vì phải tải lại trang để cập nhật. Các giải pháp SaaS bên ngoài khó tùy chỉnh hơn và thường ít được tích hợp sâu với dữ liệu nội bộ dựa trên RDS.
+
+**Giải pháp đề xuất**
+Giải pháp sử dụng kiến trúc AWS đa tầng:
+* Tiếp nhận CV qua **S3** (prefix `candidates/`) với cơ chế thông báo **S3 -> SQS** chỉ giới hạn cho các object `.pdf`.
+* Lambda `ingestion_trigger` tiêu thụ tin nhắn từ queue và gọi `StartExecution` trên Step Functions.
+* State machine điều phối `cv_jd_processor` (Python 3.12), sau đó rẽ nhánh sang `job_suggestion_engine` hoặc `candidate_ranking_engine` (Lambda chạy bằng container image từ **Amazon ECR**).
+* Kết quả đầu ra được ghi vào **DynamoDB** (thiết kế single-table để tracking ứng viên) và được publish thông qua **AppSync**.
+* Business API được cung cấp bởi **API Gateway + Lambda .NET 8** nằm trong VPC, truy cập RDS qua **AWS Secrets Manager** và xác thực JWT thông qua **Cognito**.
+* Frontend được lưu trữ trên S3 đứng sau CloudFront, với tùy chọn bảo mật **AWS WAF** ở lớp CDN.
+* Việc triển khai tự động được xử lý bởi **CodePipeline / CodeBuild** kết nối với GitHub thông qua **CodeStar Connections**.
+
+Kiến trúc này được xây dựng hướng tới khả năng bảo trì, kiểm soát chi phí dự đoán được và triển khai lặp lại thông qua IaC.
+
+**Lợi ích và ROI**
+SmartHire-AI giảm bớt công việc thủ công cho nhà tuyển dụng và ứng viên, chuẩn hóa siêu dữ liệu (metadata) CV/JD và cung cấp nền tảng thời gian thực cho các dashboard. Chi phí vận hành được ước tính chính xác bằng **Infracost** thông qua file `infracost.yml`, mô phỏng và tính toán chi phí cho ba môi trường (DEV, STAGING, PROD) bằng cách thay đổi các biến hạ tầng (xem Phần 6).
+
+ROI (Tỷ suất hoàn vốn) mong đợi chủ yếu là về mặt vận hành: thời gian xử lý ngắn hơn, độ trễ phản hồi UI thấp hơn và dễ dàng mở rộng (scale-out) với IaC thay vì phải thao tác thủ công từng dịch vụ.
+
+### 3. Kiến trúc Giải pháp (Solution Architecture)
+Nền tảng được triển khai tại `ap-southeast-1` theo mặc định (cấu hình Terraform), với một VPC riêng biệt (public/private subnets), RDS PostgreSQL nằm ở private subnet và tùy chọn sử dụng bastion/RDS Proxy. Luồng xử lý CV là S3 -> SQS -> Lambda -> Step Functions -> Xử lý AI/Vector (dựa trên thiết kế pipeline nội bộ thống nhất). Luồng xử lý JD được kích hoạt bởi API .NET, đọc `Jobs.Description` từ RDS và gọi Step Functions. Các cảnh báo vận hành (độ sâu của queue, lỗi Lambda, thời gian phản hồi p95) có thể được kích hoạt thông qua **Amazon CloudWatch** và **Amazon SNS**.
+
+**Sơ đồ luồng xử lý CV/JD**
+![CV/JD Flow Diagram](D:\FPTU\AWS\architecture.png)
+*Luồng xử lý song song cho CV và JD.*
+
+**Các Dịch vụ AWS Được Sử dụng**
+* **Amazon VPC:** Mạng ảo, subnets, security groups; tùy chọn VPC interface endpoints (Secrets Manager, Cognito, Bedrock Runtime) và các chế độ ra internet (`endpoint_only`, `shared_bastion_nat`, `nat_gateway`).
+* **Amazon RDS (PostgreSQL):** Datastore quan hệ chính; thông tin xác thực được quản lý qua **Secrets Manager + KMS**; tùy chọn **RDS Proxy** và bastion host.
+* **Amazon Cognito:** User pool, app client, identity pool; các Lambda triggers `pre_sign_up` / `post_confirmation`; xác thực qua Google.
+* **Amazon S3:** Bucket Frontend (OAC với CloudFront) và bucket lưu file thô (`candidates/`, `jobs/`) có tính năng versioning/lifecycle và mã hóa SSE; Thông báo S3 -> SQS khi có file PDF.
+* **Amazon SQS + DLQ:** Queue xử lý CV và dead-letter queue.
+* **AWS Lambda:** `ingestion_trigger`, `cv_jd_processor` (ZIP), `job_suggestion_engine` / `candidate_ranking_engine` (ECR images), và các hàm liên quan đến Cognito.
+* **Amazon ECR:** Kho chứa container cho các engine đối chiếu.
+* **AWS Step Functions:** State machine thống nhất điều phối luồng CV/JD.
+* **Amazon DynamoDB:** Tracking thông tin (ứng dụng thiết kế single-table, tùy chọn PITR/TTL tùy cấu hình).
+* **AWS AppSync:** GraphQL API, datasource là DynamoDB, các resolvers hỗ trợ subscription cho job suggestion và candidate ranking.
+* **Amazon Textract, Amazon Bedrock, Amazon Comprehend:** Trích xuất văn bản, mô hình tạo sinh/embedding, và xử lý thực thể/PII (tuân thủ IAM policy).
+* **Amazon API Gateway:** REST API, CORS, Cognito authorizer.
+* **AWS X-Ray:** Tracing end-to-end từ đầu đến cuối xuyên suốt các lớp AppSync, Lambda, và RDS.
+* **Amazon CloudFront + AWS WAF** (ARN tùy chọn): Phân phối frontend và bảo vệ biên (edge protection), hỗ trợ custom domain.
+* **Amazon Route 53 + ACM:** Quản lý DNS và chứng chỉ TLS.
+* **AWS CodePipeline, AWS CodeBuild, CodeStar Connections:** CI/CD, đóng gói S3 artifacts, build/push ECR.
+* **Amazon CloudWatch + Amazon SNS:** Logging và thông báo cảnh báo.
+* **Terraform:** Công cụ Infrastructure as Code chính cho toàn bộ môi trường.
+
+**Thiết kế Component**
+* **Client:** SPA (React + TypeScript + Vite), xác thực Cognito, gọi request tới API Gateway, nhận AppSync subscriptions.
+* **Phân phối biên (Edge):** CloudFront -> S3 frontend; HTTPS và tùy chọn WAF tại CDN edge.
+* **Lớp API:** API Gateway + Lambda .NET (có tích hợp X-Ray) nằm trong VPC, Cognito authorizer, kết nối với RDS và Step Functions.
+* **Đầu vào (CV):** Upload PDF lên S3 `candidates/` -> SQS -> ingestion Lambda -> Step Functions.
+* **Đầu vào (JD):** Backend ghi văn bản JD vào RDS; event business gọi `StartExecution` (không dùng S3 notification cho JD).
+* **Xử lý:** Step Functions gọi `cv_jd_processor`, điều hướng tới engine đối chiếu, ghi trạng thái vào DynamoDB, và publish qua AppSync mutations.
+* **Lưu trữ (Persistence):** RDS cho dữ liệu quan hệ, DynamoDB để tracking/realtime, S3 cho file thô.
+* **Định danh (Identity):** Cognito pool + xác thực Google; Lambda triggers cho luồng đăng ký.
+* **CI/CD:** Pipeline dựa trên branch GitHub, tự động build/push container và deploy.
+
+### 4. Triển khai Kỹ thuật (Technical Implementation)
+**Các giai đoạn triển khai (khuyến nghị)**
+1. **Thiết kế & IaC:** Hoàn thiện sơ đồ kiến trúc và biến Terraform (`project_name`, `environment`, `aws_region`, `egress_mode`, `domain`).
+2. **Nền tảng Mạng & Dữ liệu:** Chạy `terraform apply` cho các module networking/database; cấu hình Secrets Manager; tùy chọn bastion/RDS Proxy.
+3. **Xác thực & Hosting frontend:** Triển khai module xác thực (Cognito + Lambda triggers) và stack frontend (S3/CloudFront/Route 53/ACM).
+4. **Luồng xử lý (Processing pipeline):** Cấu hình storage, queue, S3->SQS notification, và module xử lý (Lambda, Step Functions, DynamoDB, AppSync, alarms).
+5. **API & Logic:** Triển khai API Gateway và Lambda .NET qua Terraform; xác thực tích hợp Secrets Manager và quyền IAM cho database.
+6. **CI/CD:** Kết nối GitHub qua CodeStar Connections; cấu hình build/push ECR và release pipeline.
+7. **Kiểm thử End-to-end:** Upload CV, tạo job, quan sát Step Functions/AppSync subscriptions, và kiểm tra telemetry trên CloudWatch.
+
+**Yêu cầu kỹ thuật**
+* **Terraform:** Quản lý state bảo mật; các biến nhạy cảm dùng `TF_VAR_` / `terraform.tfvars` (không commit secret lên git).
+* **Python 3.12:** Pipeline Lambda (cấu hình handler/timeout/memory qua biến `cv_parser_*`).
+* **.NET 8:** Lambda API backend nằm trong VPC, dùng IAM database auth cho RDS nếu có cấu hình.
+* **React + TypeScript + Vite:** Phát triển frontend SPA hiện đại, type-safe.
+* **Docker:** Build image cho `job_suggestion_engine` và `candidate_ranking_engine`, push lên ECR.
+* **AWS CLI:** Triển khai tài nguyên và khắc phục sự cố.
+* **Kiến thức thực tiễn:** Cognito (OAuth/OIDC), AppSync GraphQL, Step Functions ASL, các pattern S3 notification + SQS policy, và AWS X-Ray tracing.
+
+### 5. Tiến độ & Cột mốc (Timeline & Milestones)
+* **Tháng 1 & 2 (Học tập & Nghiên cứu):** Tìm hiểu sâu các dịch vụ AWS, review kiến trúc, kiểm tra hạn mức (quotas) của Bedrock/Textract, và chuẩn bị tài khoản AWS/domain.
+* **Tháng 3 (Triển khai):** Xây dựng nền tảng (VPC, RDS, Cognito, S3/CF), hoàn thiện luồng xử lý serverless (Lambda, Step Functions, DynamoDB, AppSync), tích hợp CI/CD, và golive.
+* **Sau golive:** Tối ưu chi phí, vận hành DLQ/alarm, và phát triển thêm tính năng theo backlog.
+
+### 6. Dự toán Ngân sách (Budget Estimate)
+Dưới đây là ước tính ngân sách hoàn chỉnh cho SmartHire-AI, được trích xuất từ cấu hình **Infracost** (`infracost.yml`) mô phỏng ba môi trường riêng biệt (DEV, STAGING, PROD). Bảng dự toán bao gồm các dịch vụ mạng (WAF, CloudFront), hạ tầng cố định (NAT, RDS, Proxy) và các chi phí dựa trên mức sử dụng.
+
+#### 6.1. Tóm tắt Ngân sách Hàng tháng
+Bảng dưới đây tóm tắt các khoản chi phí cố định hàng tháng theo môi trường:
+
+| Component (Thành phần) | DEV (Tiết kiệm tối đa) | STAGING (Cân bằng) | PROD (HA/Bảo mật tiêu chuẩn) |
+| :--- | :--- | :--- | :--- |
+| RDS/NAT/Compute Core | $36.20 | $65.10 | $256.66 |
+| RDS Proxy | $0.00 | $21.90 | $21.90 |
+| AWS WAF (Tường lửa) | $0.00 | $0.00 | $6.00 |
+| CloudFront (Free Tier) | $0.00 | $0.00 | $0.00 |
+| **TỔNG CHI PHÍ CỐ ĐỊNH** | **$36.20/tháng** | **$87.00/tháng** | **$284.56/tháng** |
+
+#### 6.2. Chi tiết từng môi trường
+
+**1. Môi trường DEV**
+Cấu hình: 1 NAT Instance (t3.micro), 1 AZ, không dùng Proxy/WAF.
+**Tổng chi phí cố định: $36.20/tháng**
+
+| Dịch vụ / Tài nguyên | Chi phí hàng tháng | Chi tiết Cấu hình |
+| :--- | :--- | :--- |
+| Amazon RDS | $23.20 | (db.t3.micro, 20 GB gp3) |
+| NAT Instance | $10.60 | (t3.micro, 8 GB gp2) |
+| Khác (KMS, Alarms, Secret) | $2.40 | (1 key, 10 alarms, 1 secret) |
+| **TỔNG** | **$36.20** | |
+
+**2. Môi trường STAGING**
+Cấu hình: 1 NAT Instance (t3.medium), 2 AZs, có RDS Proxy.
+**Tổng chi phí cố định: $87.00/tháng**
+
+| Dịch vụ / Tài nguyên | Chi phí hàng tháng | Chi tiết Cấu hình |
+| :--- | :--- | :--- |
+| NAT Instance | $39.50 | (t3.medium, 8 GB gp2) |
+| Amazon RDS | $23.20 | (db.t3.micro, 20 GB gp3) |
+| Amazon RDS Proxy | $21.90 | (2 vCPUs pooling) |
+| Khác (KMS, Alarms, Secret) | $2.40 | (1 key, 10 alarms, 1 secret) |
+| **TỔNG** | **$87.00** | |
+
+**3. Môi trường PROD**
+Cấu hình: 2 NAT Gateways, có interface endpoints, 2 AZs, RDS Proxy, WAF.
+**Tổng chi phí cố định: $284.56/tháng**
+
+| Dịch vụ / Tài nguyên | Chi phí hàng tháng | Chi tiết Cấu hình |
+| :--- | :--- | :--- |
+| VPC Interface Endpoints | $113.88 | (6 service endpoints trải trên 2 AZs) |
+| NAT Gateway | $86.14 | (2 gateways - chi phí thuê cố định) |
+| Amazon RDS | $43.64 | (db.t3.small, 20 GB gp3) |
+| Amazon RDS Proxy | $21.90 | (2 vCPUs pooling) |
+| Bastion Host | $10.60 | (t3.micro, 8 GB gp2) |
+| AWS WAF | $6.00 | (1 Web ACL + các luật managed phổ biến) |
+| Khác (KMS, Alarms, Secret) | $2.40 | (1 key, 10 alarms, 1 secret) |
+| **TỔNG** | **$284.56** | |
+
+#### 6.3. Chi phí dựa trên mức sử dụng (Ước tính cho 1,000 CV/tháng)
+Bảng dưới đây ước tính chi phí biến đổi tăng thêm khi xử lý **1,000 CV** mỗi tháng sử dụng các mô hình AI tiên tiến (Claude 3.5 Sonnet và Cohere Embed v3):
+
+| Dịch vụ | Đơn giá | Ước lượng cho 1,000 CV | Chi phí dự kiến |
+| :--- | :--- | :--- | :--- |
+| Amazon Bedrock (Sonnet) | In: $3.00/M, Out: $15.00/M | ~2M tokens (Claude 3.5 Sonnet) | $18.00 |
+| Amazon Bedrock (Cohere) | $0.10/1M tokens | ~1M tokens (Cohere Embed v3) | $0.10 |
+| Amazon Textract | $1.50/1,000 trang | 1,000 trang CV (Detect Text) | $1.50 |
+| AWS Lambda | $0.20/1M lần gọi | 10,000 calls (processing + auth/API) | $0.10 |
+| AWS AppSync | $4.00/1M operations | 5,000 Queries/Mutations | $0.02 |
+| AWS Cognito | Free Tier (50k MAUs) | < 1,000 user hoạt động | $0.00 |
+| Các dịch vụ khác (S3/DB/SQS)| Lưu trữ và nhắn tin | File and state management | $0.17 |
+| **TỔNG CHI PHÍ BIẾN ĐỔI** | | **~$19.84 / 1,000 CVs** | |
+
+**Ghi chú:**
+* **Claude 3.5 Sonnet** có thể mang lại chất lượng đối chiếu cao hơn, nhưng chi phí suy luận cao hơn rõ rệt so với các giải pháp nhẹ hơn.
+* **Cohere Embed v3** vẫn cực kỳ tiết kiệm chi phí cho các luồng công việc tìm kiếm vector.
+* Chi phí biến đổi trung bình cho mỗi CV được xử lý là khoảng **$0.02**.
+* Ước tính chi phí vận hành PROD trong tháng đầu tiên (bao gồm 1,000 CV): **~$304.40**
+* Các giả định về giá được dựa trên mức giá công bố của AWS tại Singapore (ap-southeast-1) và Virginia (us-east-1) do mức giá mô hình có sự khác biệt.
+
+### 7. Đánh giá rủi ro (Risk Assessment)
+**Các rủi ro chính**
+* Chạm trần hạn mức (quota limits) của dịch vụ AI (Bedrock, Textract) trong những thời điểm xử lý cao điểm.
+* Các file PDF không thể đọc được hoặc Textract xuất kết quả chất lượng thấp.
+* Số lượng tin nhắn SQS tồn đọng tăng cao và dồn ứ ở DLQ.
+* Nguy cơ lộ lọt Secret (RDS, Cognito) do cấu hình quyền truy cập sai.
+* Tăng vọt chi phí do NAT/data transfer và các lời gọi API mô hình AI quá thường xuyên.
+
+**Phương án giảm thiểu**
+* Cài đặt CloudWatch alarms cho độ sâu queue, lỗi/throttle Lambda, và p95 duration, kèm thông báo qua SNS.
+* Sử dụng DLQ + chính sách retry và phân tích dead-letter trước khi replay (gửi lại).
+* Mã hóa Secrets Manager + KMS, tuân thủ nguyên tắc least-privilege của IAM và thắt chặt security groups.
+* Đặt budget alarms và định kỳ đánh giá lại chi phí/kiến trúc.
+* Cho phép cấu hình fallback sang các mô hình AI chi phí thấp hơn khi cần thiết.
+
+### 8. Kết quả mong đợi (Expected Outcomes)
+**Cải tiến kỹ thuật**
+* Một luồng xử lý CV/JD thống nhất được điều phối bởi Step Functions, giúp giảm bớt các bước Lambda thừa và độ trễ end-to-end.
+* Giao diện người dùng được cập nhật thời gian thực thông qua AppSync subscriptions (`onJobSuggestions`, `onCandidateRanking`).
+* Thiết kế single-table DynamoDB cho khả năng tracking ứng viên, có thể mở rộng dễ dàng với các query pattern mới (thông qua GSI).
+
+**Giá trị dài hạn**
+* Khả năng triển khai hạ tầng có thể tái tạo (repeatable) và dễ dàng kiểm toán thông qua Terraform.
+* Dữ liệu tuyển dụng trong lịch sử được cấu trúc tốt hơn, phục vụ cho phân tích và cải thiện mô hình AI trong tương lai.
+* Khả năng quan sát (observability) vận hành mạnh mẽ hơn thông qua các hệ thống tập trung về logs, metrics, và alarms.

@@ -5,27 +5,22 @@ weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only.
-{{% /notice %}}
-
 ### Week 3 Objectives:
-* Dive into NoSQL databases and in-memory caching.
-* Understand advanced networking and highly available application architectures.
+* Compare Lightsail with EC2 and deploy a simplified app.
+* Containerize an application and deploy via Lightsail Containers.
+* Implement High Availability using EC2 Auto Scaling.
+* Set up system monitoring and alarms with Amazon CloudWatch.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 15  | - Command Line Operations with AWS CLI. <br> - Automate resource creation using bash scripts. | 01/19/2026 | 01/19/2026 | AWS CLI Reference |
-| 16  | - NoSQL Database Essentials with Amazon DynamoDB. <br> - Create tables, define partition keys, and insert items. | 01/20/2026 | 01/20/2026 | AWS DynamoDB |
-| 17  | - In-Memory Caching with Amazon ElastiCache. <br> - Understand Redis vs. Memcached for performance tuning. | 01/21/2026 | 01/21/2026 | FCJ Portal |
-| 18  | - Networking on AWS Workshop. <br> - Deep dive into VPC Peering and NAT Gateways. | 01/22/2026 | 01/22/2026 | AWS Workshop |
-| 19  | - Windows Workloads on AWS & Directory Services with AWS Managed Microsoft AD. | 01/23/2026 | 01/23/2026 | AWS Directory Service |
-| 20  | - Building Highly Available Web Applications. <br> - Integrate Application Load Balancer (ALB) with ASG and RDS. | 01/24/2026 | 01/24/2026 | FCJ Labs |
-| 21  | - End of week review: Map out the architecture of a resilient 3-tier web application. | 01/25/2026 | 01/25/2026 | Architecture Docs |
+| 2 | - Deploy a WordPress site using Amazon Lightsail.<br>- Assign static IP to the Lightsail instance. | 01/19/2026 | 01/19/2026 | https://000045.awsstudygroup.com/ |
+| 3 | - Build a basic Docker image.<br>- Push and run the container using Lightsail Containers.<br>- Map ports for external access. | 01/20/2026 | 01/20/2026 | https://000046.awsstudygroup.com/ |
+| 4 | - Create an EC2 Launch Template with User Data.<br>- Configure an Auto Scaling Group (ASG) across 2 Availability Zones.<br>- Attach an Application Load Balancer (ALB). | 01/21/2026 | 01/21/2026 | https://000006.awsstudygroup.com/ |
+| 5 | - Terminate an instance manually to watch ASG automatically replace it.<br>- Configure CloudWatch dashboard. | 01/22/2026 | 01/22/2026 | https://000006.awsstudygroup.com/<br>https://000008.awsstudygroup.com/ |
+| 6 | - Create a CloudWatch Alarm triggered by CPU Utilization > 70%.<br>- Stress test EC2 to trigger the alarm.<br>- Configure SNS to email me upon alarm state. | 01/23/2026 | 01/23/2026 | https://000008.awsstudygroup.com/ |
 
 ### Week 3 Achievements:
-
-* Mastered Amazon DynamoDB operations, transitioning from relational to NoSQL mindsets.
-* Successfully designed a highly available 3-tier architecture utilizing ALBs, multiple Availability Zones, and auto-scaling.
-* Automated AWS deployments using advanced CLI commands.
+* **Pros/Cons:** Lightsail is incredibly fast for standard setups but lacks granular control compared to EC2. Auto Scaling is powerful but requires ALB for full effectiveness.
+* **Challenges & Solutions:** The ASG instances kept failing health checks. I realized the ALB target group was pinging `/index.html` but my User Data script failed to start Apache. Fixed the bash script syntax.
+* **Next Steps:** Dive into DNS management (Route 53) and NoSQL (DynamoDB).

@@ -1,29 +1,25 @@
 ---
-title: "Nhật ký công việc Tuần 5"
+title: "Worklog Tuần 4"
 date: 2026-02-02
 weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo.
-{{% /notice %}}
-
 ### Mục tiêu Tuần 5:
-* Bắt đầu lộ trình Data Engineering.
-* Hiểu các khái niệm cốt lõi về xây dựng và quản lý Data Lake trên AWS.
+* Cấu hình caching bộ nhớ trong bằng ElastiCache (Redis).
+* Nâng cao kiến thức mạng với AWS Networking Workshop.
+* Phân phối nội dung toàn cầu qua Amazon CloudFront.
 
-### Các nhiệm vụ thực hiện trong tuần này:
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+### Các công việc thực hiện trong tuần này:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 29 | - Tổng quan về các dịch vụ phân tích dữ liệu trên AWS. | 02/02/2026 | 02/02/2026 | AWS Analytics Guide |
-| 30 | - Nền tảng Data Lake trên AWS. <br> - Phân biệt Data Lake và Data Warehouse. | 02/03/2026 | 02/03/2026 | FCJ Portal |
-| 31 | - Xây dựng Data Lake với dữ liệu riêng. <br> - Sử dụng Amazon S3 làm lớp lưu trữ trung tâm. | 02/04/2026 | 02/04/2026 | AWS Lake Formation |
-| 32 | - Giới thiệu về AWS Glue: Crawlers và Data Catalogs. | 02/05/2026 | 02/05/2026 | AWS Glue Docs |
-| 33 | - Thực hành: Quy trình ETL đơn giản bằng AWS Glue. | 02/06/2026 | 02/06/2026 | FCJ Labs |
-| 34 | - Khái niệm về Business Intelligence và Phân tích dữ liệu. | 02/07/2026 | 02/07/2026 | FCJ Portal |
-| 35 | - Ôn tập: Hoàn thiện cấu trúc Data Lake và chiến lược phân vùng. | 02/08/2026 | 02/08/2026 | Tự học |
+| 2 | - Khởi tạo ElastiCache Redis.<br>- Gắn Redis vào app Python để giảm tải database. | 02/02/2026 | 02/02/2026 | https://000061.awsstudygroup.com/ |
+| 3 | - Networking Workshop: Cấu hình VPC Peering.<br>- Thông mạng giữa 2 VPC khác nhau. | 02/03/2026 | 02/03/2026 | https://000092.awsstudygroup.com/ |
+| 4 | - Tìm hiểu Transit Gateway.<br>- Thiết lập NAT Gateway cho phép private subnet ra Internet. | 02/04/2026 | 02/04/2026 | https://000092.awsstudygroup.com/ |
+| 5 | - Tạo CloudFront phân phối nội dung từ S3.<br>- Setup Cache Behaviors và TTL. | 02/05/2026 | 02/05/2026 | https://000094.awsstudygroup.com/ |
+| 6 | - Thiết lập OAC chặn truy cập trực tiếp S3.<br>- Thực hành Invalidate Cache khi update web. | 02/06/2026 | 02/06/2026 | https://000094.awsstudygroup.com/ |
 
-### Thành quả Tuần 5:
-* Hiểu rõ kiến trúc Data Lake trên S3.
-* Cấu hình thành công AWS Glue Crawler để tự động khám phá lược đồ dữ liệu.
+### Thành tựu Tuần 5:
+* **Ưu/Khuyết điểm:** OAC bảo mật cực tốt nhưng rườm rà. Redis giảm độ trễ truy xuất dữ liệu đáng kể.
+* **Khó khăn & Khắc phục:** EC2 ở private subnet không ping được Google. Kiểm tra Route Table phát hiện thiếu rule trỏ 0.0.0.0/0 ra NAT Gateway.
+* **Kế hoạch:** Học Windows trên AWS và Lambda@Edge tuần tới.

@@ -13,25 +13,25 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+&emsp; **Full Name:** Nguyễn Quốc Anh
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0377018977
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** anhqnguyen150205@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** FPT Universiy HCMC
 
-&emsp; **Major:** Information Technology
+&emsp; **Major:** Artificial Intelligence
 
-&emsp; **Class:** AWS082025
+&emsp; **ID:** SE194745
 
-&emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+&emsp; **Internship Company:** Bootcamp - First Cloud AI Journey @ AWS Study Group
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 01/05/2026 to 04/05/2026
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](C:\Users\QUOC ANH\OneDrive\Pictures\aa.jpg)
 
 ### Report Content
 

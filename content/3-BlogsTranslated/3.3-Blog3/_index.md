@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 # Automate AWS Systems Manager activation for hybrid-managed node registration
 *by Justin Thomas on 09 MAR 2026 in Advanced (300), Amazon DynamoDB, AWS Lambda, AWS Systems Manager, Best Practices, Technical How-to*
 

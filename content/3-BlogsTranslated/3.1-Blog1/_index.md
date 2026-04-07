@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 # Introducing OpenTelemetry & PromQL support in Amazon CloudWatch
 *by Rodrigue Koffi on 03 APR 2026 in Amazon CloudWatch, Management Tools, Technical How-to*
 

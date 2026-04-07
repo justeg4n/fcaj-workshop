@@ -5,27 +5,21 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 ### Week 1 Objectives:
-* Familiarize with the FCJ program and setup the AWS working environment.
-* Master core infrastructure components: IAM security, VPC networking, and cost management.
+* Successfully onboard into the FCJ Workforce Program.
+* Secure AWS environments using IAM and Budgets.
+* Understand foundational Networking (VPC) on AWS.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
-| --- | --- | --- | --- | --- |
-| 1 | - Program orientation & FCJ introductions. <br> - Create AWS Free Tier account & setup AWS Budgets. | 01/05/2026 | 01/05/2026 | FCJ Portal |
-| 2 | - Getting Help with AWS Support. <br> - Access Management with AWS IAM (Users, Groups, Policies). | 01/06/2026 | 01/06/2026 | AWS Skill Builder |
-| 3 | - Networking Essentials: Understand Subnets, Route Tables, and Internet Gateways. | 01/07/2026 | 01/07/2026 | AWS Documentation |
-| 4 | - **Practice:** Build a custom VPC with Public and Private subnets from scratch. | 01/08/2026 | 01/08/2026 | FCJ Labs |
-| 5 | - Compute Essentials: Amazon EC2 instance types and AMIs. <br> - SSH connection methods (MobaXterm/PuTTY). | 01/09/2026 | 01/09/2026 | AWS EC2 Guide |
-| 6 | - Instance Profiling with IAM Roles for EC2. <br> - **Practice:** Attach IAM roles to EC2 to access S3 securely. | 01/10/2026 | 01/10/2026 | FCJ Labs |
-| 7 | - Review week 1 materials and consolidate notes on Cloud Security Posture. | 01/11/2026 | 01/11/2026 | Self-study |
+| :--- | :--- | :--- | :--- | :--- |
+| 2 | - Attended office onboarding, met mentors and team members.<br>- Read FCJ rules and regulations thoroughly.<br>- **Pros:** Clear expectations set. **Cons:** Overwhelming amount of new information. | 01/06/2026 | 01/06/2026 | |
+| 3 | - Created AWS Free Tier Account.<br>- Setup AWS Budgets to alert at $1.<br>- **Difficulty:** Credit card verification delayed. **Solution:** Re-entered details and contacted AWS Support.<br>- **Plan:** Proceed to IAM basics tomorrow. | 01/07/2026 | 01/07/2026 | [Create Account](https://000001.awsstudygroup.com/), [Budgets](https://000007.awsstudygroup.com/) |
+| 4 | - Explored AWS Support plans.<br>- Implemented IAM (Users, Groups, Policies). Enabled MFA for Root user.<br>- **Difficulty:** Understanding Policy JSON syntax. **Solution:** Used visual editor to generate JSON and studied the output. | 01/08/2026 | 01/08/2026 | [Support](https://000009.awsstudygroup.com/), [IAM](https://000002.awsstudygroup.com/) |
+| 5 | - Explored Networking Essentials (VPC).<br>- Created custom VPC, Public/Private Subnets, Internet Gateway, and Route Tables.<br>- **Difficulty:** Instances in private subnet couldn't reach the internet. **Solution:** Added a NAT Gateway and updated route tables. | 01/09/2026 | 01/09/2026 | [VPC](https://000003.awsstudygroup.com/) |
+| 6 | - Consolidated Week 1 knowledge.<br>- Cleaned up NAT Gateways to prevent unexpected charges over the weekend.<br>- Drafted worklog and prepared for Compute services next week. | 01/10/2026 | 01/10/2026 | |
 
 ### Week 1 Achievements:
-
-* Successfully deployed a custom VPC architecture with proper routing and security groups.
-* Configured AWS Budgets to prevent unexpected charges during the internship.
-* Understood the Principle of Least Privilege by configuring IAM Roles for EC2 rather than hardcoding credentials.
+* Fully integrated into the FCJ team.
+* Secured root account and established proper IAM user delegation.
+* Successfully built a custom VPC infrastructure from scratch, overcoming routing challenges.

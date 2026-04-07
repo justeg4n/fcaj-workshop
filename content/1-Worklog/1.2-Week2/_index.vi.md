@@ -1,30 +1,26 @@
 ---
-title: "Nhật ký công việc Tuần 2"
+title: "Worklog Tuần 2"
 date: 2026-01-12
 weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo.
-{{% /notice %}}
-
 ### Mục tiêu Tuần 2:
-* Nắm vững cách quản lý cơ sở dữ liệu quan hệ trên AWS.
-* Khám phá các tùy chọn điện toán đơn giản hóa và cơ chế mở rộng ứng dụng.
+* Thiết kế Virtual Private Cloud (VPC) tùy chỉnh.
+* Sử dụng IDE trên đám mây AWS Cloud9.
+* Triển khai website tĩnh bằng Amazon S3.
+* Thiết lập và kết nối với cơ sở dữ liệu quan hệ (RDS).
 
-### Các nhiệm vụ thực hiện trong tuần này:
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+### Các công việc thực hiện trong tuần này:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 8 | - Phát triển đám mây với AWS Cloud9. <br> - Thiết lập IDE trên đám mây để lập trình Python. | 01/12/2026 | 01/12/2026 | AWS Cloud9 Docs |
-| 9 | - Cơ sở dữ liệu với Amazon Relational Database Service (RDS). <br> - Khởi tạo instance cơ sở dữ liệu MySQL. | 01/13/2026 | 01/13/2026 | FCJ Labs |
-| 10 | - Điện toán đơn giản với Amazon Lightsail. <br> - Triển khai nhanh ứng dụng web bằng Lightsail blueprints. | 01/14/2026 | 01/14/2026 | AWS Lightsail |
-| 11 | - Triển khai Container với Amazon Lightsail Containers. | 01/15/2026 | 01/15/2026 | FCJ Portal |
-| 12 | - Mở rộng ứng dụng với EC2 Auto Scaling. <br> - Cấu hình Launch Templates và Auto Scaling Groups (ASG). | 01/16/2026 | 01/16/2026 | AWS Auto Scaling |
-| 13 | - Giám sát với Amazon CloudWatch. <br> - Thiết lập cảnh báo thanh toán và số liệu sử dụng CPU cho EC2. | 01/17/2026 | 01/17/2026 | AWS CloudWatch |
-| 14 | - Ôn tập Tuần 2. Kiểm thử Auto Scaling bằng cách mô phỏng tải CPU cao. | 01/18/2026 | 01/18/2026 | Tự học |
+| 2 | - Học VPC (Subnets, IGW, Route Tables).<br>- Tạo VPC với 1 public và 1 private subnet.<br>- Kiểm tra luồng mạng. | 01/12/2026 | 01/12/2026 | https://000003.awsstudygroup.com/ |
+| 3 | - Khởi tạo môi trường AWS Cloud9.<br>- Clone source code, cài Python/Node JS dependencies.<br>- Viết script test nhanh. | 01/13/2026 | 01/13/2026 | https://000049.awsstudygroup.com/ |
+| 4 | - Tạo S3 Bucket, bật tính năng static website hosting.<br>- Upload file `index.html`.<br>- Viết Bucket Policy cho phép truy cập public. | 01/14/2026 | 01/14/2026 | https://000057.awsstudygroup.com/ |
+| 5 | - Tạo Amazon RDS MySQL instance (Free Tier).<br>- Đặt RDS vào private subnet để bảo mật.<br>- Mở port 3306 ở Security Group. | 01/15/2026 | 01/15/2026 | https://000005.awsstudygroup.com/ |
+| 6 | - Kết nối RDS từ Cloud9.<br>- Chạy lệnh SQL tạo bảng cơ bản.<br>- Xóa RDS và snapshot dọn dẹp. | 01/16/2026 | 01/16/2026 | https://000005.awsstudygroup.com/ |
 
-### Thành quả Tuần 2:
-* Triển khai thành công Amazon RDS và kết nối với instance EC2.
-* Gặt hái kinh nghiệm thực tế với Amazon Lightsail để triển khai ứng dụng nhanh chóng.
-* Cấu hình Auto Scaling Group kích hoạt bởi cảnh báo CloudWatch để đảm bảo tính sẵn sàng cao.
+### Thành tựu Tuần 2:
+* **Ưu/Khuyết điểm:** Tư duy mạng VPC rất logic nhưng dễ làm sai. Ưu: Cloud9 code mượt không lo cấu hình máy. Khuyết: Đợi RDS chạy lên rất lâu (5-10 phút).
+* **Khó khăn & Khắc phục:** Website S3 báo lỗi 403 Forbidden. Đọc kĩ docs, tôi phải tắt "Block all public access" và thêm policy `s3:GetObject` dạng JSON.
+* **Kế hoạch:** Nghiên cứu Lightsail và Auto Scaling vào tuần sau.

@@ -1,30 +1,23 @@
 ---
-title: "Nhật ký công việc Tuần 1"
+title: "Worklog Tuần 1"
 date: 2026-01-05
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
-{{% /notice %}}
-
 ### Mục tiêu Tuần 1:
-* Làm quen với chương trình FCJ và thiết lập môi trường làm việc trên AWS.
-* Nắm vững các thành phần hạ tầng cốt lõi: Bảo mật IAM, mạng VPC và quản lý chi phí.
+* Onboard thành công vào chương trình FCJ.
+* Bảo mật tài khoản AWS bằng IAM và thiết lập Budgets.
+* Nắm vững kiến thức nền tảng về Mạng (VPC) trên AWS.
 
-### Các nhiệm vụ thực hiện trong tuần này:
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
-| --- | --- | --- | --- | --- |
-| 1 | - Định hướng chương trình & giới thiệu FCJ. <br> - Tạo tài khoản AWS Free Tier & thiết lập AWS Budgets. | 01/05/2026 | 01/05/2026 | FCJ Portal |
-| 2 | - Cách nhận hỗ trợ từ AWS Support. <br> - Quản lý truy cập với AWS IAM (Người dùng, Nhóm, Chính sách). | 01/06/2026 | 01/06/2026 | AWS Skill Builder |
-| 3 | - Cơ bản về Mạng: Hiểu về Subnets, Route Tables và Internet Gateways. | 01/07/2026 | 01/07/2026 | AWS Documentation |
-| 4 | - **Thực hành:** Tự xây dựng một VPC tùy chỉnh với Public và Private subnets từ đầu. | 01/08/2026 | 01/08/2026 | FCJ Labs |
-| 5 | - Cơ bản về Điện toán: Các loại instance Amazon EC2 và AMIs. <br> - Các phương thức kết nối SSH (MobaXterm/PuTTY). | 01/09/2026 | 01/09/2026 | AWS EC2 Guide |
-| 6 | - Instance Profiling với IAM Roles cho EC2. <br> - **Thực hành:** Gắn IAM roles vào EC2 để truy cập S3 một cách bảo mật. | 01/10/2026 | 01/10/2026 | FCJ Labs |
-| 7 | - Ôn tập tài liệu tuần 1 và tổng hợp ghi chú về Trạng thái Bảo mật Đám mây. | 01/11/2026 | 01/11/2026 | Tự học |
+### Các công việc thực hiện trong tuần:
+| Ngày | Công việc | Ngày Bắt Đầu | Ngày Hoàn Thành | Tài liệu tham khảo |
+| :--- | :--- | :--- | :--- | :--- |
+| 2 | - Lên văn phòng nghe phổ biến, làm quen mentor và ghép nhóm.<br>- Đọc kỹ luật FCJ.<br>- **Khó khăn:** Lượng thông tin lớn. **Khắc phục:** Note lại các ý chính vào Notion. | 06/01/2026 | 06/01/2026 | |
+| 3 | - Tạo tài khoản AWS Free Tier.<br>- Cài đặt AWS Budgets cảnh báo khi vượt 1$.<br>- **Khó khăn:** Xác thực thẻ tín dụng bị chậm. **Khắc phục:** Nhập lại thông tin và mở case Support. | 07/01/2026 | 07/01/2026 | [Create Account](https://000001.awsstudygroup.com/), [Budgets](https://000007.awsstudygroup.com/) |
+| 4 | - Học về AWS Support.<br>- Triển khai IAM (Users, Groups, Policies). Bật MFA cho Root.<br>- **Khó khăn:** Cú pháp JSON Policy. **Khắc phục:** Dùng Visual Editor để tự generate JSON rồi đọc hiểu. | 08/01/2026 | 08/01/2026 | [Support](https://000009.awsstudygroup.com/), [IAM](https://000002.awsstudygroup.com/) |
+| 5 | - Học Networking (VPC).<br>- Tạo VPC, Public/Private Subnets, Internet Gateway.<br>- **Khó khăn:** Subnet private không ra được mạng. **Khắc phục:** Cấu hình thêm NAT Gateway và Route Table. | 09/01/2026 | 09/01/2026 | [VPC](https://000003.awsstudygroup.com/) |
+| 6 | - Tổng hợp kiến thức Tuần 1.<br>- Xoá NAT Gateway (Clean up) để tránh mất tiền oan.<br>- Lên kế hoạch tuần tới học về EC2. | 10/01/2026 | 10/01/2026 | |
 
-### Thành quả Tuần 1:
-* Triển khai thành công kiến trúc VPC tùy chỉnh với các quy tắc định tuyến và nhóm bảo mật (Security Groups) phù hợp.
-* Cấu hình AWS Budgets để ngăn chặn các chi phí phát sinh ngoài ý muốn.
-* Hiểu rõ Nguyên tắc Đặc quyền Tối thiểu (Least Privilege) bằng cách cấu hình IAM Roles thay vì sử dụng thông tin xác thực cố định.
+### Thành tựu Tuần 1:
+* Đã thiết lập môi trường an toàn và hiểu rõ cấu trúc VPC cơ bản. Sẵn sàng cho phần Compute.

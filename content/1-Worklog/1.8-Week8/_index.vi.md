@@ -1,29 +1,25 @@
 ---
-title: "Nhật ký công việc Tuần 8"
+title: "Worklog Tuần 8"
 date: 2026-02-23
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo.
-{{% /notice %}}
-
 ### Mục tiêu Tuần 8:
-* Khởi động dự án SmartHireAI.
-* Thiết lập cấu trúc cơ bản cho hệ thống AI Matching.
+* Bắt đầu dự án **SmartHireAI** (24/02).
+* Học Infrastructure as Code (IaC) qua Terraform.
+* Phân tích ECS Fargate vs EKS cho Backend .NET.
 
-### Các nhiệm vụ thực hiện trong tuần này:
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+### Các công việc thực hiện trong tuần này:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 50 | - Thiết kế kiến trúc tổng thể SmartHireAI v1.0. | 02/23/2026 | 02/23/2026 | Whiteboard |
-| 51 | - Khởi tạo Project SmartHireAI chính thức. | 02/24/2026 | 02/24/2026 | GitHub Setup |
-| 52 | - Xây dựng mô hình dữ liệu (ERD) cho ứng viên và tin tuyển dụng trên RDS. | 02/25/2026 | 02/25/2026 | pgAdmin |
-| 53 | - Tìm hiểu tích hợp pgvector cho PostgreSQL để tìm kiếm tương đồng. | 02/26/2026 | 02/26/2026 | pgvector Docs |
-| 54 | - Xây dựng API Backend .NET Core cơ bản để quản lý Jobs. | 02/27/2026 | 02/27/2026 | .NET Guide |
-| 55 | - Thiết kế giao diện Dashboard cho Nhà tuyển dụng (Figma). | 02/28/2026 | 02/28/2026 | Figma |
-| 56 | - Tổng kết tuần: Chốt danh sách các Lambda cần xây dựng. | 03/01/2026 | 03/01/2026 | Tài liệu nhóm |
+| 2 | - Cài Terraform CLI.<br>- Khởi tạo `main.tf` tạo VPC và Security Group. | 02/23/2026 | 02/23/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.3-week3/ |
+| 3 | - Kickoff SmartHireAI: Lên ý tưởng kiến trúc "Split-Brain" (State bằng .NET, AI bằng Python Lambda). | 02/24/2026 | 02/24/2026 | |
+| 4 | - Chia module Terraform (`vpc.tf`, `variables.tf`).<br>- Chạy `terraform apply` thử nghiệm. | 02/25/2026 | 02/25/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.3-week3/ |
+| 5 | - Phân tích ECS và EKS.<br>- Quyết định dùng ECS Fargate cho API .NET để giảm thiểu quản trị node. | 02/26/2026 | 02/26/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.3-week3/ |
+| 6 | - Viết code Terraform cho Auto Scaling.<br>- Đẩy source code Terraform lên GitHub team. | 02/27/2026 | 02/27/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.3-week3/ |
 
-### Thành quả Tuần 8:
-* Hoàn thành bản vẽ kiến trúc hệ thống sơ bộ.
-* Triển khai thành công database PostgreSQL tích hợp extension pgvector trên RDS.
+### Thành tựu Tuần 8:
+* **Ưu/Khuyết điểm:** Terraform giúp hạ tầng minh bạch, dễ deploy lại. ECS Fargate phù hợp hơn EKS vì team không có kỹ sư chuyên cứng K8s.
+* **Khó khăn & Khắc phục:** Vô tình gõ cứng Access Key vào file `main.tf`. Mentor nhắc nhở. Đã cấu hình `aws configure` local để Terraform tự đọc credentials an toàn.
+* **Kế hoạch:** Quản lý State Terraform và làm S3-Lambda Trigger cho việc upload CV.
