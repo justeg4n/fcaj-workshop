@@ -5,6 +5,7 @@ weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
+
 ### Week 9 Objectives:
 * Configure Terraform Remote State for team collaboration.
 * Implement Serverless S3-Lambda triggers.

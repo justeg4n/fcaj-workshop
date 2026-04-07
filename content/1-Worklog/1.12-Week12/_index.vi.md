@@ -5,6 +5,7 @@ weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
+
 ### Mục tiêu Tuần 12:
 * Hoàn thiện tích hợp multi-agent Claude và kiến trúc AppSync.
 * Triển khai hàm tìm kiếm khoảng cách vector L2 (`job_suggestion_engine`).

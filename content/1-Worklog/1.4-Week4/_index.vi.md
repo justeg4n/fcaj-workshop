@@ -5,6 +5,7 @@ weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
+
 ### Mục tiêu Tuần 4:
 * Quản lý DNS và policy với Amazon Route 53.
 * Chuyển đổi thói quen dùng Console sang AWS CLI.

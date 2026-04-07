@@ -5,6 +5,7 @@ weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
+
 ### Week 11 Objectives:
 * Analyze Monolith vs Microservices for system architecture planning.
 * Decide between SQL (RDS) vs NoSQL (DynamoDB) for SmartHireAI.

@@ -5,6 +5,7 @@ weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
+
 ### Week 3 Objectives:
 * Compare Lightsail with EC2 and deploy a simplified app.
 * Containerize an application and deploy via Lightsail Containers.

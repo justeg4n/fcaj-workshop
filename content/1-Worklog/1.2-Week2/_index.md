@@ -5,6 +5,7 @@ weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
+
 ### Week 2 Objectives:
 * Design and implement a custom Virtual Private Cloud (VPC).
 * Setup cloud-based IDE using AWS Cloud9.

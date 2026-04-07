@@ -5,6 +5,7 @@ weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
+
 ### Mục tiêu Tuần 8:
 * Bắt đầu dự án **SmartHireAI** (24/02).
 * Học Infrastructure as Code (IaC) qua Terraform.

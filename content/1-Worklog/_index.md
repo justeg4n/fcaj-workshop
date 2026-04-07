@@ -5,6 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
+
 **On this page**, you will find the complete documentation of my 12-week internship journey at AWS via the First Cloud AI Journey (FCAJ) program. 
 
 **How did I complete it?** As a 3rd-year AI undergraduate at FPT University, I dedicated my time from Day 2 to Day 6 each week, balancing my academic background in machine learning and data science with hands-on cloud infrastructure. I meticulously followed the AWS documentation, implemented labs, encountered numerous errors, debugged them using AWS CLI and Console, and documented every step. 

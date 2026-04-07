@@ -5,6 +5,7 @@ weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
+
 ### Week 7 Objectives:
 * Consolidate networking/compute into a Highly Available (HA) architecture.
 * Introduction to AWS AI/ML services and Amazon SageMaker.

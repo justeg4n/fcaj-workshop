@@ -1,10 +1,6 @@
 ---
 title: "Internship Report"
-<<<<<<< HEAD
-date: 2024-01-01
-=======
-date: 2026-01-05
->>>>>>> ed17fed27c55804e764aafb8a979a812b347a0b8
+date: 2026-01-01
 weight: 1
 chapter: false
 ---
@@ -12,9 +8,7 @@ chapter: false
     
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 ### Student Information:
 &emsp; **Full Name:** Nguyễn Quốc Anh

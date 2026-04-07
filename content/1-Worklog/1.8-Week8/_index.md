@@ -5,6 +5,7 @@ weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
+
 ### Week 8 Objectives:
 * Official Kickoff: **SmartHireAI Project** (Feb 24).
 * Learn Infrastructure as Code (IaC) with Terraform.

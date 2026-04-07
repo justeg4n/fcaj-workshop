@@ -5,6 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
+
 ### Mục tiêu Tuần 1:
 * Onboard thành công vào chương trình FCJ.
 * Bảo mật tài khoản AWS bằng IAM và thiết lập Budgets.

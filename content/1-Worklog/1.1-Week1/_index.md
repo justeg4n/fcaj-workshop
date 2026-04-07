@@ -5,6 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
+
 ### Week 1 Objectives:
 * Successfully onboard into the FCJ Workforce Program.
 * Secure AWS environments using IAM and Budgets.

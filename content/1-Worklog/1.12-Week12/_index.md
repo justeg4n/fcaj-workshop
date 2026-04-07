@@ -5,6 +5,7 @@ weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
+
 ### Week 12 Objectives:
 * Finalize the integration of multi-agent Claude and AppSync architecture.
 * Implement the L2 distance vector search (`job_suggestion_engine.py`).

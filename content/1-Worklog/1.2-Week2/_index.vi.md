@@ -5,6 +5,7 @@ weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
+
 ### Mục tiêu Tuần 2:
 * Thiết kế Virtual Private Cloud (VPC) tùy chỉnh.
 * Sử dụng IDE trên đám mây AWS Cloud9.

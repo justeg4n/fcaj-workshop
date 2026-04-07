@@ -5,6 +5,7 @@ weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
+
 ### Mục tiêu Tuần 11:
 * Phân tích Monolith vs Microservices.
 * Lựa chọn giữa SQL (RDS) và NoSQL (DynamoDB).

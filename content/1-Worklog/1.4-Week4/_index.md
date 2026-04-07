@@ -5,6 +5,7 @@ weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
+
 ### Week 4 Objectives:
 * Manage domains and routing policies using Route 53.
 * Transition from GUI to AWS CLI for operational speed.

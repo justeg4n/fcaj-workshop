@@ -5,6 +5,7 @@ weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
+
 ### Mục tiêu Tuần 6:
 * Sửa đổi HTTP request tại biên (Edge) bằng Lambda@Edge.
 * Triển khai máy chủ Windows trên EC2.

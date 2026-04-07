@@ -5,6 +5,7 @@ weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
+
 ### Mục tiêu Tuần 10:
 * Thành thạo kỹ năng debug hệ thống Serverless phân tán.
 * Nghiên cứu AWS Well-Architected Framework.

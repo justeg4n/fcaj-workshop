@@ -5,6 +5,7 @@ weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
+
 ### Mục tiêu Tuần 7:
 * Đúc kết kiến trúc Highly Available (Multi-AZ, ALB, RDS).
 * Khám phá mảng AI/ML trên AWS và Amazon SageMaker.

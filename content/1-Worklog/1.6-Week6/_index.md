@@ -5,6 +5,7 @@ weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
+
 ### Week 6 Objectives:
 * Intercept and modify web requests at the edge via Lambda@Edge.
 * Provision Windows Server workloads on EC2.

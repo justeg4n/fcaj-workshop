@@ -5,6 +5,7 @@ weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
+
 ### Mục tiêu Tuần 5:
 * Cấu hình caching bộ nhớ trong bằng ElastiCache (Redis).
 * Nâng cao kiến thức mạng với AWS Networking Workshop.

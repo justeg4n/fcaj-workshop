@@ -5,6 +5,7 @@ weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
+
 ### Week 10 Objectives:
 * Master debugging in highly decoupled Serverless architectures.
 * Research and present findings on the AWS Well-Architected Framework.

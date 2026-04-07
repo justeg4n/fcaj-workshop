@@ -5,6 +5,7 @@ weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
+
 ### Mục tiêu Tuần 3:
 * So sánh Lightsail với EC2 và triển khai app nhanh.
 * Đóng gói ứng dụng (Container) và chạy trên Lightsail Containers.

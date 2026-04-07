@@ -5,6 +5,7 @@ weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
+
 ### Week 5 Objectives:
 * Implement in-memory caching with ElastiCache (Redis).
 * Master advanced networking concepts via AWS Networking Workshop.

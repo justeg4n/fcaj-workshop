@@ -5,6 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
+
 **Trên trang này**, bạn sẽ tìm thấy toàn bộ tài liệu về hành trình thực tập 12 tuần của tôi tại AWS thông qua chương trình First Cloud AI Journey (FCAJ).
 
 **Tôi đã hoàn thành nó như thế nào?** Là sinh viên năm 3 chuyên ngành AI tại Đại học FPT, tôi đã dành thời gian từ Ngày 2 đến Ngày 6 mỗi tuần, kết hợp nền tảng học thuật về AI với thực hành hạ tầng đám mây. Tôi theo sát tài liệu AWS, triển khai các bài lab, đối mặt với vô số lỗi, gỡ lỗi qua Console và CLI, và ghi chép lại mọi bước.
