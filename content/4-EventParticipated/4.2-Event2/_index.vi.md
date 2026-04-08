@@ -1,125 +1,57 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "Cloud Mastery 2026"
+date: 2026-03-14
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch: Cloud Mastery 2026
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+Cloud Mastery 2026 được tổ chức với mục tiêu mang đến cho người tham dự góc nhìn thực tế hơn về cách cloud, trí tuệ nhân tạo và các thiết bị kết nối đang hội tụ trong những dự án hiện đại. Sự kiện tập trung vào ba chủ đề chính: AI Agent, AIoT và Prompt Engineering. Đối với em, sự kiện này rất có ý nghĩa vì giúp em nối liền kiến thức cloud với cách triển khai thực tế trong các dự án, bài thực tập và công việc sau này.
 
-### Danh Sách Diễn Giả
-
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+Sự kiện không chỉ dừng lại ở việc lắng nghe lý thuyết, mà còn giúp em hiểu cách các công nghệ hiện đại có thể được ứng dụng theo hướng có cấu trúc, có ích và gần hơn với môi trường sản xuất thực tế.
 
 ### Nội Dung Nổi Bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### 1. AI Isn’t Just for Chatting Anymore (AI Agent)
+Buổi đầu tiên đã thay đổi khá nhiều cách em nhìn về AI. Trước đây, em thường nghĩ AI chủ yếu là chatbot để trả lời câu hỏi. Sau workshop này, em nhận ra AI Agent mạnh hơn rất nhiều vì nó có thể thực sự hành động.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+Ý tưởng quan trọng nhất là agent có thể sử dụng công cụ, gọi API, truy vấn dữ liệu và tự hoàn thành nhiệm vụ một cách độc lập hơn. Điều này giúp em hiểu rằng tương lai của AI không chỉ là tạo ra câu trả lời bằng văn bản, mà còn là thực hiện công việc trong một môi trường thực tế. Em có cảm giác như đang nhìn thấy một “trợ lý số” thật sự chứ không phải chỉ là một mô hình hội thoại đơn thuần.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### 2. When Cloud Meets Hardware (AIoT)
+Buổi thứ hai cho em thấy rõ cách cloud có thể kết nối trực tiếp với thiết bị phần cứng. Phần demo tủ khóa thông minh là một trải nghiệm rất đáng nhớ vì nó kết hợp Arduino hoặc Raspberry Pi với các dịch vụ AWS.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+Điều em ấn tượng nhất là việc dùng AI để nhận diện khuôn mặt thông qua AWS Rekognition. Kết quả là một chiếc tủ khóa bình thường đã được biến thành một hệ thống kiểm soát truy cập thông minh. Buổi này giúp em cảm nhận cloud một cách trực quan hơn vì nó cho thấy các dịch vụ cloud có thể điều khiển và nâng cấp cả những hệ thống vật lý trong đời sống hằng ngày.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### 3. The “Art” of Talking to AI (Prompt Engineering)
+Buổi cuối cùng tập trung vào prompt engineering và giúp em hiểu rằng để AI tạo ra đầu ra tốt thì không thể làm theo cảm tính.
 
-#### Domain-Driven Design (DDD)
-
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
-
-#### Event-Driven Architecture
-
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
-
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+Em học được rằng viết prompt cũng có phương pháp rõ ràng, chứ không chỉ là “nói đại cho AI hiểu”. Nội dung chia sẻ cách tách một câu lệnh thành nhiều thành phần để mô hình hiểu đúng ý hơn và trả lời chính xác hơn. Ngoài ra, em còn học được cách dùng CloudWatch để theo dõi chi phí và hiệu năng của workload AI, điều này rất quan trọng nếu muốn xây dựng ứng dụng AI hiệu quả thay vì chỉ thử nghiệm một cách rời rạc.
 
 ### Những Gì Học Được
 
-#### Tư Duy Thiết Kế
+Cloud Mastery 2026 giúp em hiểu rằng AI đang ngày càng gắn chặt hơn với các hệ thống vận hành thực tế. Em học được rằng:
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+- AI Agent có thể thực thi nhiệm vụ chứ không chỉ trả lời;
+- cloud có thể kết hợp với phần cứng để tạo ra các giải pháp tự động hóa thực tế;
+- prompt engineering là một kỹ năng kỹ thuật ảnh hưởng trực tiếp đến chất lượng đầu ra;
+- observability và chi phí vận hành rất quan trọng khi làm việc với AI ở quy mô lớn.
 
-#### Kiến Trúc Kỹ Thuật
+### Bài học rút ra
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+Một trong những bài học lớn nhất đối với em là cloud và AI phải được thiết kế dựa trên bài toán sử dụng thực tế. Một ý tưởng hay chưa đủ nếu không thể vận hành hiệu quả. Bài học quan trọng khác là AI sẽ hữu ích hơn rất nhiều khi được kết nối với công cụ, dữ liệu và hệ thống thay vì chỉ tồn tại như một chatbot độc lập.
 
-#### Chiến Lược Hiện Đại Hóa
+### Một số hình ảnh khi tham gia sự kiện
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+- [Chèn ảnh check-in hoặc hội trường tại đây]
+- [Chèn ảnh session AI Agent tại đây]
+- [Chèn ảnh AIoT hoặc Prompt Engineering tại đây]
 
-### Ứng Dụng Vào Công Việc
+> Tổng thể, sự kiện đã giúp tôi hiểu thực tế hơn về cách AI, cloud và thiết bị kết nối có thể phối hợp với nhau để giải quyết bài toán đời sống, đồng thời tạo động lực để tôi tiếp tục học theo hướng ứng dụng nhiều hơn.
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+### Kết Luận
 
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+Cloud Mastery 2026 là một sự kiện rất giá trị vì giúp em thấy được hệ sinh thái cloud rộng lớn đến mức nào. Từ AI Agent đến AIoT và Prompt Engineering, sự kiện cho em thấy công việc cloud hiện đại không còn chỉ xoay quanh hạ tầng nữa, mà đã gắn rất chặt với tự động hóa thông minh, tích hợp thiết bị và chất lượng tương tác giữa con người với AI.

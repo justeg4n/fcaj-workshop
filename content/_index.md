@@ -21,7 +21,7 @@ chapter: false
 
 &emsp; **University:** FPT University HCMC
 
-&emsp; **Major:** Artificial Intelligent
+&emsp; **Major:** Artificial Intelligence
 
 &emsp; **Class:** SE194745
 
@@ -31,7 +31,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 05/01/2026 to 18/04/2026
 
-![Your profile picture](https://media.discordapp.net/attachments/990597326630436979/1490040942520959016/profile.jpg?ex=69d29c44&is=69d14ac4&hm=277841da4cf4fc84bd10f873c2e76bf29d04e372cf39a0a4f0c951498d29f0c3&=&format=webp&width=189&height=283)
+![Your profile picture](https://media.discordapp.net/attachments/799671634012799019/1491230718414684390/aa.jpg?ex=69d6f054&is=69d59ed4&hm=925c9371b4b6ee9c80afd866eb1f9ecbee6f3a66a4cc5345ae79a92460d5251b&=&format=webp&width=620&height=930)
 
 ### Report Content
 

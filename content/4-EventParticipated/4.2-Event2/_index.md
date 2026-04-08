@@ -1,126 +1,57 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "Cloud Mastery 2026"
+date: 2026-03-14
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Event Report: Cloud Mastery 2026
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+Cloud Mastery 2026 was designed to give participants a practical view of how cloud, artificial intelligence, and connected devices are coming together in real projects. The event focused on three main themes: AI Agents, AIoT, and Prompt Engineering. For me, the event was important because it helped bridge the gap between cloud concepts and real-world implementation patterns that can be used in internships, team projects, and future work.
 
-### Speakers
+The event was not only about listening to ideas. It was about understanding how modern technology can be applied in a more structured, useful, and production-oriented way.
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+### Main Content Highlights
 
-### Key Highlights
+#### 1. AI Isn’t Just for Chatting Anymore (AI Agent)
+The first session changed the way I think about AI. Before attending, I mostly saw AI as a chatbot that answers questions. After the workshop, I realized that an AI Agent is much more powerful because it can actually take action.
 
-#### Identifying the drawbacks of legacy application architecture
+The key idea was that an agent can use tools, call APIs, inspect data, and complete tasks more autonomously. This made me understand that the future of AI is not only about generating text, but also about performing work in a practical environment. It felt much closer to the idea of a real digital assistant than a simple conversational model.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+#### 2. When Cloud Meets Hardware (AIoT)
+The second session showed how cloud technology can connect directly with physical devices. The smart locker demonstration was especially memorable because it combined hardware such as Arduino or Raspberry Pi with AWS services.
 
-#### Transitioning to modern application architecture – Microservices
+What impressed me most was the use of AI for facial recognition through AWS Rekognition. The result was a simple locker turned into an intelligent access-control system. This session made the cloud feel much more tangible to me because it showed that cloud services can be used to control and enhance physical systems in everyday life.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### 3. The Art of Talking to AI (Prompt Engineering)
+The last session focused on prompt engineering, and it made me understand that getting good AI output is not accidental. A good prompt must be carefully structured.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+I learned that prompt writing has a method, not just intuition. The session explained how to break a command into multiple parts so the model can understand the intent more clearly and return a more accurate response. I also learned about using CloudWatch to monitor the cost and performance of AI workloads, which is very useful for building efficient AI applications instead of simply experimenting without control.
 
-#### Domain-Driven Design (DDD)
+### What I Learned
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+Cloud Mastery 2026 taught me that AI is becoming more operational and more connected to the rest of the system. I learned that:
 
-#### Event-Driven Architecture
+- AI Agents can perform tasks instead of only generating responses;
+- cloud services can interact with hardware to create real-world automation;
+- prompt design is a technical skill that directly affects output quality;
+- observability and cost awareness are important when working with AI at scale.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+### Lessons Learned
 
-#### Compute Evolution
+One of the biggest lessons for me was that cloud and AI should be designed together with the actual use case in mind. A good idea is not enough if it cannot be operated efficiently. Another important lesson is that AI becomes much more useful when it is connected to tools, data, and systems instead of remaining an isolated chatbot.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+### Some Photos From the Event
 
-#### Amazon Q Developer
+- [Insert check-in or auditorium photo here]
+- [Insert AI Agent session photo here]
+- [Insert AIoT or prompt engineering photo here]
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+> Overall, the event gave me a more practical understanding of how AI, cloud, and connected devices can work together to solve real problems, and it motivated me to continue learning in a more applied direction.
 
-### Key Takeaways
+### Final Thoughts
 
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+Cloud Mastery 2026 was a valuable event because it showed me how broad the cloud ecosystem has become. From AI agents to AIoT and prompt engineering, the event helped me see that modern cloud work is no longer limited to infrastructure alone. It is now closely tied to intelligent automation, device integration, and the quality of human-AI interaction.
