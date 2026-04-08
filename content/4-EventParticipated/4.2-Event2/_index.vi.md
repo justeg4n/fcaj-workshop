@@ -6,11 +6,7 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-<<<<<<< HEAD
 # Bài thu hoạch: Cloud Mastery 2026
-=======
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
->>>>>>> 5404d32071b538ecf9145bac7ee52b413b84184c
 
 ### Mục Đích Của Sự Kiện
 

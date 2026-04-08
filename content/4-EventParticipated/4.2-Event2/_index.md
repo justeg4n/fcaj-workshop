@@ -6,11 +6,7 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-<<<<<<< HEAD
 # Event Report: Cloud Mastery 2026
-=======
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
->>>>>>> 5404d32071b538ecf9145bac7ee52b413b84184c
 
 ### Event Objectives
 

@@ -29,11 +29,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 01/05/2026 to 04/05/2026
 
-<<<<<<< HEAD
 ![Your profile picture](https://media.discordapp.net/attachments/799671634012799019/1491230718414684390/aa.jpg?ex=69d6f054&is=69d59ed4&hm=925c9371b4b6ee9c80afd866eb1f9ecbee6f3a66a4cc5345ae79a92460d5251b&=&format=webp&width=620&height=930)
-=======
-![Your profile picture]("C:\Users\QUOC ANH\OneDrive\Pictures\aa.jpg")
->>>>>>> 5404d32071b538ecf9145bac7ee52b413b84184c
 
 ### Report Content
 

@@ -6,11 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-<<<<<<< HEAD
 # Bài thu hoạch: AWS re:Invent 2025 re:Cap in HCMC
-=======
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
->>>>>>> 5404d32071b538ecf9145bac7ee52b413b84184c
 
 ### Mục Đích Của Sự Kiện
 
