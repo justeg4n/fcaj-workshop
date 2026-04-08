@@ -42,7 +42,7 @@ Trong quá trình thực tập, em đã có cơ hội tham gia **4 sự kiện r
 ---
 
 ### [Sự kiện 4](4.4-Event4/)
-&emsp;**Tên sự kiện:** Cloud Mastery Series
+&emsp;**Tên sự kiện:** Cloud Mastery #2
 
 &emsp;**Thời gian:** 04/04/2026
 

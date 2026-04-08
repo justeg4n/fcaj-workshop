@@ -36,6 +36,8 @@ Another strong message from this part of the event was reliability. Cloud system
 #### Networking and Security
 The networking and security updates were also very practical. I learned that protection at the edge is becoming more important than ever, especially for modern applications with global users and sensitive workloads. CloudFront security enhancements, quantum-resistant protection concepts, and fixed-price options all showed that the cloud is moving toward a more stable, predictable, and secure operating model.
 
+![Networking](https://media.discordapp.net/attachments/799671634012799019/1491237680049295471/71B448F2-CD19-40CA-A4D7-B07070C72703.jpg?ex=69d6f6d0&is=69d5a550&hm=fa15d6f804fd662883c36b3b0fecaeb97115372d14e0d8d68b7f96d31bb4e3ff&=&format=webp&width=930&height=930)
+
 #### Databases
 The database section reminded me that cost optimization and data access speed must go together. AWS highlighted savings for services such as RDS and DynamoDB when workloads are used consistently, while OpenSearch improvements showed that search can now become smarter and more natural-language-friendly through GPU support.
 
@@ -61,6 +63,7 @@ The biggest lesson I took away is that cloud architecture is no longer just abou
 
 > Overall, the event did not only provide technical updates; it also helped me rethink application design, infrastructure modernization, and the way teams collaborate to build scalable cloud systems.
 
+![Final-event1](https://media.discordapp.net/attachments/799671634012799019/1491237706095661277/364C730A-E823-43A1-8899-E9D26F8D6193.jpg?ex=69d6f6d6&is=69d5a556&hm=9aefd71181cae4479a2830b56ea32a76d9f5c7f7ec550ef156238a441774d67a&=&format=webp&width=1421&height=800)
 
 ### Final Thoughts
 

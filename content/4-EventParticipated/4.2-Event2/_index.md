@@ -21,6 +21,8 @@ The first session changed the way I think about AI. Before attending, I mostly s
 
 The key idea was that an agent can use tools, call APIs, inspect data, and complete tasks more autonomously. This made me understand that the future of AI is not only about generating text, but also about performing work in a practical environment. It felt much closer to the idea of a real digital assistant than a simple conversational model.
 
+![AI](https://aws-first-cloud-journey-six.vercel.app/4-eventparticipated/4.2-event2/2.2.jpg)
+
 #### 2. When Cloud Meets Hardware (AIoT)
 The second session showed how cloud technology can connect directly with physical devices. The smart locker demonstration was especially memorable because it combined hardware such as Arduino or Raspberry Pi with AWS services.
 
@@ -31,6 +33,9 @@ The last session focused on prompt engineering, and it made me understand that g
 
 I learned that prompt writing has a method, not just intuition. The session explained how to break a command into multiple parts so the model can understand the intent more clearly and return a more accurate response. I also learned about using CloudWatch to monitor the cost and performance of AI workloads, which is very useful for building efficient AI applications instead of simply experimenting without control.
 
+![Prompt](https://media.discordapp.net/attachments/799671634012799019/1491237706569879733/096A06CB-D93C-4898-BA7A-F89304EBF317.jpg?ex=69d6f6d7&is=69d5a557&hm=a3cf1961525e600691ada6dd0fd282fa154f4119580b533a41d0fd250dd0f5e1&=&format=webp&width=600&height=800)
+
+
 ### What I Learned
 
 Cloud Mastery 2026 taught me that AI is becoming more operational and more connected to the rest of the system. I learned that:
@@ -40,15 +45,14 @@ Cloud Mastery 2026 taught me that AI is becoming more operational and more conne
 - prompt design is a technical skill that directly affects output quality;
 - observability and cost awareness are important when working with AI at scale.
 
+![Master](https://media.discordapp.net/attachments/799671634012799019/1491237706905292921/F88D4E6C-2D2E-446E-B2F6-2CBBA367E490.jpg?ex=69d6f6d7&is=69d5a557&hm=f417051f6b973d1985d519bad7403eb10a051324d2aa6ecfd5acc521c9bbc30b&=&format=webp&width=600&height=800)
+
 ### Lessons Learned
 
 One of the biggest lessons for me was that cloud and AI should be designed together with the actual use case in mind. A good idea is not enough if it cannot be operated efficiently. Another important lesson is that AI becomes much more useful when it is connected to tools, data, and systems instead of remaining an isolated chatbot.
 
-### Some Photos From the Event
+![Tokens](https://media.discordapp.net/attachments/799671634012799019/1491237706905292921/F88D4E6C-2D2E-446E-B2F6-2CBBA367E490.jpg?ex=69d6f6d7&is=69d5a557&hm=f417051f6b973d1985d519bad7403eb10a051324d2aa6ecfd5acc521c9bbc30b&=&format=webp&width=600&height=800)
 
-- [Insert check-in or auditorium photo here]
-- [Insert AI Agent session photo here]
-- [Insert AIoT or prompt engineering photo here]
 
 > Overall, the event gave me a more practical understanding of how AI, cloud, and connected devices can work together to solve real problems, and it motivated me to continue learning in a more applied direction.
 

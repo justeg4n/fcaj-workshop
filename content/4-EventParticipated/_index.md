@@ -43,7 +43,7 @@ During my internship, I had the opportunity to participate in **four meaningful 
 ---
 
 ### [Event 4](4.4-Event4/)
-&emsp;**Event Name:** Cloud Mastery Series
+&emsp;**Event Name:** Cloud Mastery #2
 
 &emsp;**Date & Time:** 2026-04-04
 
