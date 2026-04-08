@@ -14,11 +14,11 @@ pre: " <b> 1.9. </b> "
 ### Các công việc thực hiện trong tuần này:
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 2 | - Cấu hình S3 lưu Terraform State.<br>- Dùng DynamoDB để Lock State tránh xung đột team. | 03/02/2026 | 03/02/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.4-week4/ |
-| 3 | - Code hàm Python Lambda (`ingestion_trigger.py`).<br>- Cài đặt trigger tự chạy khi có file mới upload lên S3. | 03/03/2026 | 03/03/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.5-week5/ |
-| 4 | - Làm lab Serverless Bookstore.<br>- Kết nối API Gateway tới Lambda. | 03/04/2026 | 03/04/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.5-week5/ |
-| 5 | - Thiết kế DynamoDB Single-Table.<br>- Xác định Partition Key và Sort Key linh hoạt. | 03/05/2026 | 03/05/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.5-week5/ |
-| 6 | - Ứng dụng lab Bookstore vào SmartHireAI: dùng Lambda để nhận PDF CV upload và đẩy vào SQS. | 03/06/2026 | 03/06/2026 | |
+| 2 | - Cấu hình S3 lưu Terraform State.<br>- Dùng DynamoDB để Lock State tránh xung đột team. | 03/02/2026 | 03/02/2026 |  |
+| 3 | - Code hàm Python Lambda (`ingestion_trigger.py`).<br>- Cài đặt trigger tự chạy khi có file mới upload lên S3. | 03/03/2026 | 03/03/2026 |  |
+| 4 | - Làm lab Serverless Bookstore.<br>- Kết nối API Gateway tới Lambda. | 03/04/2026 | 03/04/2026 |  |
+| 5 | - Thiết kế DynamoDB Single-Table.<br>- Xác định Partition Key và Sort Key linh hoạt. | 03/05/2026 | 03/05/2026 |  |
+| 6 | - Ứng dụng lab Bookstore vào SmartHireAI: dùng Lambda để nhận PDF CV upload và đẩy vào SQS. | 03/06/2026 | 03/06/2026 |  |
 
 ### Thành tựu Tuần 9:
 * **Ưu/Khuyết điểm:** Tư duy DynamoDB khác hoàn toàn SQL, rất khó thiết kế ban đầu nhưng truy vấn siêu tốc. S3-Lambda trigger tạo ra luồng async hoàn hảo.

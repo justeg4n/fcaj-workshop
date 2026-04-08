@@ -14,10 +14,10 @@ pre: " <b> 1.11. </b> "
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - System planning: Monolithic vs Microservices breakdown.<br>- Decide on Event-Driven Microservices using EventBridge and SQS. | 03/16/2026 | 03/16/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.7-week7/ |
-| 3 | - Database Analysis: RDS PostgreSQL vs DynamoDB.<br>- Concluded: RDS for user/job state, pgvector for AI embeddings, DynamoDB for real-time interview transcripts. | 03/17/2026 | 03/17/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.7-week7/ |
-| 4 | - Refactor Terraform modules to support Amazon RDS with pgvector extension. | 03/18/2026 | 03/18/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.7-week7/ |
-| 5 | - Study AWS Labs Terraform MCP Server integrations for automated IaC provisioning. | 03/19/2026 | 03/19/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.7-week7/ |
+| 2 | - System planning: Monolithic vs Microservices breakdown.<br>- Decide on Event-Driven Microservices using EventBridge and SQS. | 03/16/2026 | 03/16/2026 |  |
+| 3 | - Database Analysis: RDS PostgreSQL vs DynamoDB.<br>- Concluded: RDS for user/job state, pgvector for AI embeddings, DynamoDB for real-time interview transcripts. | 03/17/2026 | 03/17/2026 |  |
+| 4 | - Refactor Terraform modules to support Amazon RDS with pgvector extension. | 03/18/2026 | 03/18/2026 |  |
+| 5 | - Study AWS Labs Terraform MCP Server integrations for automated IaC provisioning. | 03/19/2026 | 03/19/2026 |  |
 | 6 | - Draft AWS Step Functions state machine to orchestrate CV extraction pipeline. | 03/20/2026 | 03/20/2026 | |
 
 ### Week 11 Achievements:

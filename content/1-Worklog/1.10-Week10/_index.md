@@ -14,11 +14,11 @@ pre: " <b> 1.10. </b> "
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Debugging Serverless: Trace requests across API Gateway, Python Lambda, and DynamoDB using AWS X-Ray. | 03/09/2026 | 03/09/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
-| 3 | - Analyze CloudWatch Logs for Lambda timeouts.<br>- Optimize Boto3 initialization outside the Lambda handler. | 03/10/2026 | 03/10/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
-| 4 | - Research AWS Well-Architected Framework (6 pillars).<br>- Apply the Security and Reliability pillars to the SmartHireAI VPC design. | 03/11/2026 | 03/11/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
-| 5 | - Use Terraform to deploy strict VPC subnets (public ALB, private ECS, isolated RDS). | 03/12/2026 | 03/12/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
-| 6 | - Configure VPC Endpoints for S3 and DynamoDB to keep traffic strictly within the AWS network. | 03/13/2026 | 03/13/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
+| 2 | - Debugging Serverless: Trace requests across API Gateway, Python Lambda, and DynamoDB using AWS X-Ray. | 03/09/2026 | 03/09/2026 |  |
+| 3 | - Analyze CloudWatch Logs for Lambda timeouts.<br>- Optimize Boto3 initialization outside the Lambda handler. | 03/10/2026 | 03/10/2026 |  |
+| 4 | - Research AWS Well-Architected Framework (6 pillars).<br>- Apply the Security and Reliability pillars to the SmartHireAI VPC design. | 03/11/2026 | 03/11/2026 |  |
+| 5 | - Use Terraform to deploy strict VPC subnets (public ALB, private ECS, isolated RDS). | 03/12/2026 | 03/12/2026 |  |
+| 6 | - Configure VPC Endpoints for S3 and DynamoDB to keep traffic strictly within the AWS network. | 03/13/2026 | 03/13/2026 |  |
 
 ### Week 10 Achievements:
 * **Pros/Cons:** AWS X-Ray provides incredible visibility into distributed systems. VPC Endpoints enhance security but add to the hourly cost.
