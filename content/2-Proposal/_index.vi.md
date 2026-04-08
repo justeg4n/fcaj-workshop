@@ -44,8 +44,8 @@ ROI (Tỷ suất hoàn vốn) mong đợi chủ yếu là về mặt vận hành
 Nền tảng được triển khai tại `ap-southeast-1` theo mặc định (cấu hình Terraform), với một VPC riêng biệt (public/private subnets), RDS PostgreSQL nằm ở private subnet và tùy chọn sử dụng bastion/RDS Proxy. Luồng xử lý CV là S3 -> SQS -> Lambda -> Step Functions -> Xử lý AI/Vector (dựa trên thiết kế pipeline nội bộ thống nhất). Luồng xử lý JD được kích hoạt bởi API .NET, đọc `Jobs.Description` từ RDS và gọi Step Functions. Các cảnh báo vận hành (độ sâu của queue, lỗi Lambda, thời gian phản hồi p95) có thể được kích hoạt thông qua **Amazon CloudWatch** và **Amazon SNS**.
 
 **Sơ đồ luồng xử lý CV/JD**
-![CV/JD Flow Diagram](D:\FPTU\AWS\architecture.png)
-*Luồng xử lý song song cho CV và JD.*
+![CV/JD Flow Diagram](https://media.discordapp.net/attachments/799671634012799019/1491290224859549722/architecture.png?ex=69d727c0&is=69d5d640&hm=2986e85328da86a9087704bc335d786ccbd3f152105d4affea3691ab8d23e26e&=&format=webp&quality=lossless&width=1361&height=800)
+*Luồng xử lý cho CV và JD.*
 
 **Các Dịch vụ AWS Được Sử dụng**
 * **Amazon VPC:** Mạng ảo, subnets, security groups; tùy chọn VPC interface endpoints (Secrets Manager, Cognito, Bedrock Runtime) và các chế độ ra internet (`endpoint_only`, `shared_bastion_nat`, `nat_gateway`).

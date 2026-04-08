@@ -44,8 +44,8 @@ Expected ROI is mostly operational: shorter processing time, lower UI response l
 The platform is deployed in `ap-southeast-1` by default (per Terraform configuration), with a dedicated VPC (public/private subnets), private RDS PostgreSQL, and optional bastion/RDS Proxy. CV flow is S3 -> SQS -> Lambda -> Step Functions -> AI/vector processing (based on the unified internal pipeline design). JD flow is triggered by the .NET API, which reads `Jobs.Description` from RDS and calls Step Functions. Operational alerts (queue depth, Lambda errors, p95 duration) can be enabled via **Amazon CloudWatch** and **Amazon SNS**.
 
 **CV/JD Flow Diagram**
-![CV/JD Flow Diagram](D:\FPTU\AWS\architecture.png)
-*Parallel CV and JD processing flow.*
+![CV/JD Flow Diagram](https://media.discordapp.net/attachments/799671634012799019/1491290224859549722/architecture.png?ex=69d727c0&is=69d5d640&hm=2986e85328da86a9087704bc335d786ccbd3f152105d4affea3691ab8d23e26e&=&format=webp&quality=lossless&width=1361&height=800)
+*CV and JD processing flow.*
 
 **AWS Services Used**
 * **Amazon VPC:** Virtual network, subnets, security groups; optional VPC interface endpoints (Secrets Manager, Cognito, Bedrock Runtime) and egress modes (`endpoint_only`, `shared_bastion_nat`, `nat_gateway`).
