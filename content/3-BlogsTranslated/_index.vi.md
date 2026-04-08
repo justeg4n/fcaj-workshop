@@ -1,14 +1,10 @@
 ---
-title: "Các Blog Đã Dịch"
+title: "Các bài Blog Đã Dịch"
 date: 2026-04-05
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 Phần này sẽ liệt kê và giới thiệu các blog kỹ thuật về AWS Cloud Operations mà tôi đã nghiên cứu và dịch thuật trong quá trình thực tập. Các bài viết này bao trùm các chủ đề từ giám sát nâng cao, DevOps ứng dụng AI, cho đến tự động hóa hạ tầng lai (hybrid).
 

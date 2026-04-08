@@ -5,26 +5,22 @@ weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only.
-{{% /notice %}}
 
 ### Week 7 Objectives:
-* Advanced database management.
-* Transition into the AI/ML Services track to prepare for the SmartHireAI capstone.
+* Consolidate networking/compute into a Highly Available (HA) architecture.
+* Introduction to AWS AI/ML services and Amazon SageMaker.
+* Run a SageMaker Notebook for data exploration.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 43  | - Advanced PostgreSQL on AWS - Part 1. <br> - Amazon Aurora Serverless vs Provisioned RDS. | 02/16/2026 | 02/16/2026 | FCJ Portal |
-| 44  | - Advanced PostgreSQL on AWS - Part 2. <br> - Read Replicas, Multi-AZ deployments, and backup strategies. | 02/17/2026 | 02/17/2026 | AWS RDS Docs |
-| 45  | - AI/ML Services on AWS Overview. <br> - Differentiate between managed AI services (Polly, Rekognition) and ML platforms (SageMaker). | 02/18/2026 | 02/18/2026 | AWS ML Guide |
-| 46  | - Machine Learning Essentials. <br> - The ML lifecycle: Data Prep, Training, Tuning, and Inference. | 02/19/2026 | 02/19/2026 | FCJ Labs |
-| 47  | - Machine Learning with Amazon SageMaker. <br> - Launch a SageMaker Notebook instance. | 02/20/2026 | 02/20/2026 | Amazon SageMaker |
-| 48  | - SageMaker Immersion Day. <br> - Train a built-in XGBoost model and deploy an endpoint. | 02/21/2026 | 02/21/2026 | AWS Immersion Day |
-| 49  | - End of week review: Plan how AWS AI services will be utilized for the upcoming Capstone project. | 02/22/2026 | 02/22/2026 | Capstone Notes |
+| 2 | - Architect a multi-AZ web app: ALB -> ASG (Private) -> Multi-AZ RDS.<br>- Test failover mechanics. | 02/16/2026 | 02/16/2026 | https://000101.awsstudygroup.com/ |
+| 3 | - Overview of AI/ML stack: Rekognition, Comprehend, Transcribe.<br>- Setup SageMaker Studio domain. | 02/17/2026 | 02/17/2026 | https://cloudjourney.awsstudygroup.com/7-aimlservice/ |
+| 4 | - Launch a Jupyter Notebook instance in SageMaker.<br>- Load dataset from S3 into Pandas dataframe. | 02/18/2026 | 02/18/2026 | https://000200.awsstudygroup.com/ |
+| 5 | - SageMaker Immersion Day: Train an XGBoost model.<br>- Deploy model to a real-time endpoint. | 02/19/2026 | 02/19/2026 | https://000200.awsstudygroup.com/ |
+| 6 | - Invoke endpoint using Boto3.<br>- Clean up endpoints to avoid heavy GPU billing! | 02/20/2026 | 02/20/2026 | https://000200.awsstudygroup.com/ |
 
 ### Week 7 Achievements:
-* Gained advanced knowledge of scaling PostgreSQL workloads using Amazon Aurora.
-* Completed the SageMaker Immersion Day, successfully training and deploying an ML model endpoint.
-* Laid the theoretical groundwork for GenAI and AWS Bedrock, perfectly timing the transition into the SmartHireAI capstone project.
+* **Pros/Cons:** SageMaker abstracts away infrastructure, letting me focus on data science (Python/R). However, endpoints can be expensive if left running.
+* **Challenges & Solutions:** Encountered IAM permission issues when SageMaker tried to read my S3 bucket. Attached the `AmazonS3ReadOnlyAccess` policy to the SageMaker execution role.
+* **Next Steps:** Kick off the internal project (SmartHireAI) and start using Terraform.

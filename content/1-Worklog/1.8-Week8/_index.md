@@ -5,27 +5,22 @@ weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only.
-{{% /notice %}}
 
 ### Week 8 Objectives:
-* Officially kick off the **SmartHireAI** project.
-* Transition from learning foundational AWS ML services to building serverless AI architecture.
+* Official Kickoff: **SmartHireAI Project** (Feb 24).
+* Learn Infrastructure as Code (IaC) with Terraform.
+* Research container orchestration (ECS Fargate vs EKS) for the .NET backend.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 50 | - Review Machine Learning with Amazon SageMaker & SageMaker Immersion Day concepts. | 02/23/2026 | 02/23/2026 | AWS SageMaker |
-| 51 | - **SmartHireAI Kickoff (Feb 24):** Define system architecture. <br> - Decide on Serverless approach (Lambda, API Gateway, SQS). | 02/24/2026 | 02/24/2026 | Project Board |
-| 52 | - Write `simulate_interview.py` for local testing. <br> - Integrate Boto3 with Amazon Bedrock (Claude 3.5 Sonnet). | 02/25/2026 | 02/25/2026 | Boto3 Docs |
-| 53 | - Draft Prompt Engineering rules (Anti-Jailbreak, Code Awareness, Persona constraints). | 02/26/2026 | 02/26/2026 | Anthropic Guide |
-| 54 | - Debug local simulator issues: Fix duplicated inputs and CLI UI loops. | 02/27/2026 | 02/27/2026 | Python Docs |
-| 55 | - Explore Amazon Polly for Neural TTS integration (converting Claude's text to speech). | 02/28/2026 | 02/28/2026 | AWS Polly |
-| 56 | - Consolidate local test scripts into a dedicated GitHub folder structure to separate from production Lambdas. | 03/01/2026 | 03/01/2026 | Git Best Practices |
+| 2 | - Install Terraform CLI.<br>- Write `main.tf` to provision basic VPC and Security Groups. | 02/23/2026 | 02/23/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.3-week3/ |
+| 3 | - SmartHireAI Kickoff: System architecture design brainstorming.<br>- Determine split-brain approach (.NET backend + Python AI engines). | 02/24/2026 | 02/24/2026 | |
+| 4 | - Modularize Terraform code (`vpc.tf`, `variables.tf`, `outputs.tf`).<br>- Use `terraform plan` and `terraform apply`. | 02/25/2026 | 02/25/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.3-week3/ |
+| 5 | - Research Orchestration: ECS Fargate vs EKS.<br>- Decide on Fargate for the SmartHireAI .NET API to minimize node management. | 02/26/2026 | 02/26/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.3-week3/ |
+| 6 | - Setup Auto Scaling policies via Terraform.<br>- Version control Terraform code in GitHub. | 02/27/2026 | 02/27/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.3-week3/ |
 
 ### Week 8 Achievements:
-
-* Officially started the SmartHireAI capstone project.
-* Successfully built a local CLI simulator to test Claude 3.5 Sonnet's conversational abilities.
-* Designed strict Prompt Engineering guardrails to prevent candidate jailbreaks during interviews.
+* **Pros/Cons:** Terraform makes infrastructure highly reproducible, but state conflicts happen in teams. Fargate is perfectly suited for our .NET API without the overhead of Kubernetes (EKS).
+* **Challenges & Solutions:** Hardcoding AWS credentials in Terraform is a bad practice. I learned to use AWS Profiles locally and rely on IAM Roles in CI/CD pipelines.
+* **Next Steps:** Terraform Remote State and Lambda triggers for SmartHireAI ingestion.

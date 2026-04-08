@@ -1,41 +1,26 @@
 ---
 title: "Worklog"
-date: 2026-01-05
+date: 2026-01-01
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+**On this page**, you will find the complete documentation of my 12-week internship journey at AWS via the First Cloud AI Journey (FCAJ) program. 
 
-**On this page**, I introduce the comprehensive worklog of my 12-week internship program at FPT Cloud Journey (FCJ). This log tracks my progression from mastering core AWS cloud infrastructure to architecting and deploying **SmartHireAI**, a GenAI-driven recruitment platform.
+**How did I complete it?** As a 3rd-year AI undergraduate at FPT University, I dedicated my time from Day 2 to Day 6 each week, balancing my academic background in machine learning and data science with hands-on cloud infrastructure. I meticulously followed the AWS documentation, implemented labs, encountered numerous errors, debugged them using AWS CLI and Console, and documented every step. 
 
-I completed this program over **12 weeks**, divided into foundational cloud training and a focused Capstone Project development phase. The journey involved hands-on labs, AWS Immersion Days, and the implementation of advanced serverless and AI architectures.
+**What did I do in those weeks?** Over 12 weeks (from Jan 5, 2026, to Apr 4, 2026), I progressed from fundamental cloud concepts (IAM, EC2, VPC) to advanced Serverless and AI integration. By Week 8, I initiated the **SmartHireAI** project, applying my learning directly to a real-world enterprise architecture utilizing multi-agent Claude, pgvector, AppSync, and Event-Driven Python Lambdas.
 
-The weekly progress is summarized as follows:
-
-**Week 1:** [Getting familiar with AWS and core infrastructure (IAM, VPC, Budgets)](1.1-week1/)
-
-**Week 2:** [Mastering RDS, Auto Scaling, and application monitoring](1.2-week2/)
-
-**Week 3:** [NoSQL databases with DynamoDB and High Availability architectures](1.3-week3/)
-
-**Week 4:** [Content delivery via CloudFront and SmartHireAI project ideation](1.4-week4/)
-
-**Week 5:** [Data Engineering track: Building Data Lakes with AWS Glue and S3](1.5-week5/)
-
-**Week 6:** [Serverless Analytics with Athena and BI dashboards in QuickSight](1.6-week6/)
-
-**Week 7:** [Advanced Database scaling and AWS SageMaker ML Immersion](1.7-week7/)
-
-**Week 8:** [SmartHireAI Development: Database ERD and pgvector integration](1.8-week8/)
-
-**Week 9:** [Building the Serverless CV Parsing pipeline (SQS, Textract, Bedrock)](1.9-week9/)
-
-**Week 10:** [Optimizing Bedrock with Cross-Region Inference and Event-Driven logic](1.10-week10/)
-
-**Week 11:** [System Integration: Hybrid Matching Engines and AppSync notifications](1.11-week11/)
-
-**Week 12:** [Finalization: Observability with X-Ray and IaC with Terraform](1.12-week12/)
+* **Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
+* **Week 2:** [Networking, Cloud9, S3, and Database Essentials](1.2-week2/)
+* **Week 3:** [Simplified Compute, Containers, and Auto Scaling](1.3-week3/)
+* **Week 4:** [Route 53, CLI Operations, and NoSQL](1.4-week4/)
+* **Week 5:** [Caching, Content Delivery, and Networking Labs](1.5-week5/)
+* **Week 6:** [Edge Computing, Windows Workloads, and Directory Services](1.6-week6/)
+* **Week 7:** [Highly Available Apps and SageMaker Machine Learning](1.7-week7/)
+* **Week 8:** [IaC with Terraform & SmartHireAI Kickoff](1.8-week8/)
+* **Week 9:** [Terraform State Management & Serverless Data Processing](1.9-week9/)
+* **Week 10:** [Debugging Serverless architectures & Well-Architected Framework](1.10-week10/)
+* **Week 11:** [System Architecture, Microservices, and Database Selection](1.11-week11/)
+* **Week 12:** [Final Integration & Production Readiness](1.12-week12/)

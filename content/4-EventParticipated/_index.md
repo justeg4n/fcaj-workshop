@@ -6,8 +6,21 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
+<<<<<<< HEAD
 
 During my internship, I had the opportunity to participate in **four meaningful events**. Each event gave me a different perspective on cloud computing, modern application design, DevOps, and Generative AI. More importantly, they helped me connect what I learned from theory with what is actually being used in industry.
+=======
+> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
+> 
+> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
+> * Event name
+> * Date and time
+> * Location (if applicable)
+> * Your role in the event (attendee, event support, speaker, etc.)
+> * A brief description of the event’s content and main activities
+> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
+> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
+>>>>>>> 5404d32071b538ecf9145bac7ee52b413b84184c
 
 ### [Event 1](4.1-Event1/)
 &emsp;**Event Name:** AWS re:Invent 2025 re:Cap in HCMC (Jan 29)

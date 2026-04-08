@@ -5,27 +5,22 @@ weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only.
-{{% /notice %}}
 
 ### Week 10 Objectives:
-* Resolve AWS Bedrock cross-region access issues.
-* Implement Event-Driven Architecture integrating S3, SQS, Textract, and Bedrock for the Pre-Interview CV Parsing stage.
+* Master debugging in highly decoupled Serverless architectures.
+* Research and present findings on the AWS Well-Architected Framework.
+* Provision infrastructure networks securely using Terraform.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 64 | - Debug Bedrock errors (`ThrottlingException`). Implement `Config(mode='adaptive')` and exponential backoff in Boto3. | 03/09/2026 | 03/09/2026 | Boto3 Retry Config |
-| 65 | - Debug Model Deprecation (`Legacy` error) and Marketplace subscription blocks. Work with Root User (BE1) to accept EULA for Claude 3.5 Sonnet v2. | 03/10/2026 | 03/10/2026 | AWS IAM / Bedrock |
-| 66 | - Implement **Cross-Region Inference Profiles**. Update `MODEL_ID` to use APAC ARNs to route requests from Singapore to the US seamlessly. | 03/11/2026 | 03/11/2026 | AWS Cross-Region |
-| 67 | - Develop `cv_parser.py` Lambda. Integrate Amazon Textract with pagination (`NextToken`) to handle multi-page CV PDFs. | 03/12/2026 | 03/12/2026 | AWS Textract |
-| 68 | - Upgrade CV Parser to Unified AI Call: Evaluate CV against Job Description (JD) in a single Bedrock execution to save costs. | 03/13/2026 | 03/13/2026 | System Architecture |
-| 69 | - Configure SQS payload processing. Design the JSON schema for the Backend to pass `profileId`, `fileKey`, and `jdText` to the AI Lambda. | 03/14/2026 | 03/14/2026 | AWS SQS |
-| 70 | - End of Week 10 Review: Integrate Lambda with Backend .NET API using `urllib` to post parsed JSON results. | 03/15/2026 | 03/15/2026 | Serverless Integration |
+| 2 | - Debugging Serverless: Trace requests across API Gateway, Python Lambda, and DynamoDB using AWS X-Ray. | 03/09/2026 | 03/09/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
+| 3 | - Analyze CloudWatch Logs for Lambda timeouts.<br>- Optimize Boto3 initialization outside the Lambda handler. | 03/10/2026 | 03/10/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
+| 4 | - Research AWS Well-Architected Framework (6 pillars).<br>- Apply the Security and Reliability pillars to the SmartHireAI VPC design. | 03/11/2026 | 03/11/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
+| 5 | - Use Terraform to deploy strict VPC subnets (public ALB, private ECS, isolated RDS). | 03/12/2026 | 03/12/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
+| 6 | - Configure VPC Endpoints for S3 and DynamoDB to keep traffic strictly within the AWS network. | 03/13/2026 | 03/13/2026 | https://aws-first-cloud-journey-six.vercel.app/1-worklog/1.6-week6/ |
 
 ### Week 10 Achievements:
-
-* Conquered complex AWS Bedrock configuration issues, specifically resolving Marketplace EULA blocks and configuring Cross-Region ARNs for `ap-southeast-1`.
-* Successfully built a production-ready Event-Driven pipeline: SQS -> Lambda -> Textract -> Bedrock -> .NET API.
-* Optimized AI costs by combining CV parsing and JD matching into a single LLM prompt execution.
+* **Pros/Cons:** AWS X-Ray provides incredible visibility into distributed systems. VPC Endpoints enhance security but add to the hourly cost.
+* **Challenges & Solutions:** My Lambda was timing out when reading from DynamoDB inside the VPC. Realized Lambda in a private subnet needs a NAT Gateway or VPC Endpoint to access AWS APIs. Implemented a DynamoDB Gateway Endpoint to fix it securely and freely.
+* **Next Steps:** System Architecture (Monolith vs Microservices) and SQL vs NoSQL.

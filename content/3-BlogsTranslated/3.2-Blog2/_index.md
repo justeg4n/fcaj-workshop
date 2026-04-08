@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 # Announcing General Availability of AWS DevOps Agent
 *by Madhu Balaji on 31 MAR 2026 in Announcements, DevOps, Launch, News*
 

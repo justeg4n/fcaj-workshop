@@ -1,6 +1,6 @@
 ---
 title: "Báo cáo thực tập"
-date: 2024-01-01
+date: 2026-01-01
 weight: 1
 chapter: false
 ---
@@ -9,11 +9,19 @@ chapter: false
 ### Thông tin sinh viên:
 &emsp; **Họ và tên:** Nguyễn Quốc Anh
 
+<<<<<<< HEAD
 &emsp; **Số điện thoại:** 0377 018 977
 
 &emsp; **Email:** anhqnguyen150205@gmail.com
 
 &emsp; **Trường:** Đại học FPT HCMC
+=======
+&emsp; **Số điện thoại:** 0377018977
+
+&emsp; **Email:** anhqnguyen150205@gmail.com
+
+&emsp; **Trường:** Đại Học FPT Hồ Chí Minh
+>>>>>>> 5404d32071b538ecf9145bac7ee52b413b84184c
 
 &emsp; **Ngành:** Trí tuệ nhân tạo
 
@@ -23,9 +31,15 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
 
+<<<<<<< HEAD
 &emsp; **Thời gian thực tập:** Từ ngày 01/01/2026 đến ngày 18/04/2026
 
 ![Ảnh đại diện của bạn](https://media.discordapp.net/attachments/799671634012799019/1491230718414684390/aa.jpg?ex=69d6f054&is=69d59ed4&hm=925c9371b4b6ee9c80afd866eb1f9ecbee6f3a66a4cc5345ae79a92460d5251b&=&format=webp&width=620&height=930)
+=======
+&emsp; **Thời gian thực tập:** Từ ngày 05/01/2026 đến ngày 05/04/2026
+
+![Ảnh đại diện của bạn]("C:\Users\QUOC ANH\OneDrive\Pictures\aa.jpg")
+>>>>>>> 5404d32071b538ecf9145bac7ee52b413b84184c
 
 
 
