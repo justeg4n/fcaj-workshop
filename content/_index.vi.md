@@ -21,7 +21,7 @@ chapter: false
 
 &emsp; **Công ty thực tập:** Bootcamp - First Cloud AI Journey @ AWS Study Group
 
-&emsp; **Vị trí thực tập:** FCJ Cloud Intern
+&emsp; **Vị trí thực tập:** FCAJ Cloud Intern
 
 &emsp; **Thời gian thực tập:** Từ ngày 01/01/2026 đến ngày 18/04/2026
 

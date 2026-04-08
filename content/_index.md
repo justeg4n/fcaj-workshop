@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Internship Company:** Bootcamp - First Cloud AI Journey @ AWS Study Group
 
-&emsp; **Internship Position:** FCJ Cloud Intern
+&emsp; **Internship Position:** FCAJ Cloud Intern
 
 &emsp; **Internship Duration:** From 01/01/2026 to 04/18/2026
 
