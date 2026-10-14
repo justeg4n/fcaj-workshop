@@ -21,7 +21,7 @@ Buổi đầu tiên đã thay đổi khá nhiều cách em nhìn về AI. Trư�
 
 Ý tưởng quan trọng nhất là agent có thể sử dụng công cụ, gọi API, truy vấn dữ liệu và tự hoàn thành nhiệm vụ một cách độc lập hơn. Điều này giúp em hiểu rằng tương lai của AI không chỉ là tạo ra câu trả lời bằng văn bản, mà còn là thực hiện công việc trong một môi trường thực tế. Em có cảm giác như đang nhìn thấy một “trợ lý số” thật sự chứ không phải chỉ là một mô hình hội thoại đơn thuần.
 
-![AI](https://aws-first-cloud-journey-six.vercel.app/4-eventparticipated/4.2-event2/2.2.jpg)
+![Kiến trúc AI Agent được trình bày tại Cloud Mastery](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.2-Event2/ai-agent.png)
 
 
 #### 2. When Cloud Meets Hardware (AIoT)
@@ -34,7 +34,7 @@ Buổi cuối cùng tập trung vào prompt engineering và giúp em hiểu rằ
 
 Em học được rằng viết prompt cũng có phương pháp rõ ràng, chứ không chỉ là “nói đại cho AI hiểu”. Nội dung chia sẻ cách tách một câu lệnh thành nhiều thành phần để mô hình hiểu đúng ý hơn và trả lời chính xác hơn. Ngoài ra, em còn học được cách dùng CloudWatch để theo dõi chi phí và hiệu năng của workload AI, điều này rất quan trọng nếu muốn xây dựng ứng dụng AI hiệu quả thay vì chỉ thử nghiệm một cách rời rạc.
 
-![Prompt](https://media.discordapp.net/attachments/799671634012799019/1491237706569879733/096A06CB-D93C-4898-BA7A-F89304EBF317.jpg?ex=69d6f6d7&is=69d5a557&hm=a3cf1961525e600691ada6dd0fd282fa154f4119580b533a41d0fd250dd0f5e1&=&format=webp&width=600&height=800)
+![Các thành phần của một prompt tốt](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.2-Event2/prompt-components.jpg)
 
 ### Những Gì Học Được
 
@@ -45,13 +45,13 @@ Cloud Mastery 2026 giúp em hiểu rằng AI đang ngày càng gắn chặt hơn
 - prompt engineering là một kỹ năng kỹ thuật ảnh hưởng trực tiếp đến chất lượng đầu ra;
 - observability và chi phí vận hành rất quan trọng khi làm việc với AI ở quy mô lớn.
 
-![Master](https://media.discordapp.net/attachments/799671634012799019/1491237706905292921/F88D4E6C-2D2E-446E-B2F6-2CBBA367E490.jpg?ex=69d6f6d7&is=69d5a557&hm=f417051f6b973d1985d519bad7403eb10a051324d2aa6ecfd5acc521c9bbc30b&=&format=webp&width=600&height=800)
+![Kỹ thuật viết prompt cho LLM](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.2-Event2/mastering-llm-prompting.jpg)
 
 ### Bài học rút ra
 
 Một trong những bài học lớn nhất đối với em là cloud và AI phải được thiết kế dựa trên bài toán sử dụng thực tế. Một ý tưởng hay chưa đủ nếu không thể vận hành hiệu quả. Bài học quan trọng khác là AI sẽ hữu ích hơn rất nhiều khi được kết nối với công cụ, dữ liệu và hệ thống thay vì chỉ tồn tại như một chatbot độc lập.
 
-![Tokens](https://media.discordapp.net/attachments/799671634012799019/1491237706905292921/F88D4E6C-2D2E-446E-B2F6-2CBBA367E490.jpg?ex=69d6f6d7&is=69d5a557&hm=f417051f6b973d1985d519bad7403eb10a051324d2aa6ecfd5acc521c9bbc30b&=&format=webp&width=600&height=800)
+![Token economics và chi phí AI](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.2-Event2/token-economics.jpg)
 
 > Tổng thể, sự kiện đã giúp tôi hiểu thực tế hơn về cách AI, cloud và thiết bị kết nối có thể phối hợp với nhau để giải quyết bài toán đời sống, đồng thời tạo động lực để tôi tiếp tục học theo hướng ứng dụng nhiều hơn.
 

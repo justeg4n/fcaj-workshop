@@ -1,16 +1,16 @@
 ---
-title: "Cloud Mastery 2026"
-date: 2026-03-14
+title: "Cloud Mastery #2"
+date: 2026-04-04
 weight: 4
 chapter: false
 pre: " <b> 4.4. </b> "
 ---
 
-# Bài thu hoạch: Cloud Mastery 2026
+# Bài thu hoạch: Cloud Mastery #2
 
 ### Mục Đích Của Sự Kiện
 
-Sự kiện **Cloud Mastery 2026** được tổ chức nhằm trang bị cho người tham gia nền tảng vững chắc về các kỹ thuật Cloud hiện đại, tập trung vào ba chủ đề chính:
+Sự kiện **Cloud Mastery #2** được tổ chức nhằm trang bị cho người tham gia nền tảng vững chắc về các kỹ thuật Cloud hiện đại, tập trung vào ba chủ đề chính:
 
 - Điều phối container với Kubernetes
 - Xây dựng hệ thống chịu tải cao bằng Elixir
@@ -91,6 +91,8 @@ Nội dung chính:
   - Unified toolchain
   - Phù hợp hệ thống backend lớn
 
+![Nội dung CloudFormation Template tại Cloud Mastery #2](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.4-Event4/cloudformation-template.png)
+
 ---
 
 #### 3. Infrastructure as Code – Tự động hóa hạ tầng
@@ -122,6 +124,8 @@ Phần cuối nói về **IaC**.
   - Automation
   - Reproducibility
   - Collaboration
+
+![Cách AWS CloudFormation hoạt động](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.4-Event4/cloudformation-workflow.jpg)
 
 ---
 

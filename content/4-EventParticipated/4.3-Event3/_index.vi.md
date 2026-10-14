@@ -21,32 +21,22 @@ Một trong những phần gây ấn tượng nhất với em là cách TymeX ti
 
 Điều này rất quan trọng vì cho em thấy một sự thay đổi trong tư duy: mục tiêu không chỉ là cung cấp phần mềm như một dịch vụ, mà là xây dựng những sản phẩm và nền tảng có thể tái sử dụng, mở rộng và áp dụng cho nhiều bài toán khác nhau. Buổi này giúp em hiểu rõ hơn cách tư duy theo platform-centric design có thể nâng cao chất lượng, tốc độ và tính bền vững của hệ thống.
 
-![event211](https://aws-first-cloud-journey-six.vercel.app/4-eventparticipated/4.3-event3/3.1.jpg)
-
-![event212](https://aws-first-cloud-journey-six.vercel.app/4-eventparticipated/4.3-event3/3.2.jpg)
-
-![event213](https://aws-first-cloud-journey-six.vercel.app/4-eventparticipated/4.3-event3/3.3.jpg)
-
 #### 2. Platform Engineering & Modern Careers
 Buổi tiếp theo giúp em hiểu sâu hơn về Platform Engineering và vai trò của nó trong hệ sinh thái Cloud và DevOps. Trước đây em thường nghĩ DevOps chủ yếu là tự động hóa và triển khai, nhưng buổi này cho em thấy Platform Engineering đi xa hơn bằng cách xây dựng internal platform để hỗ trợ các developer khác làm việc hiệu quả hơn.
 
 Em nhận ra rằng vai trò của kỹ sư cloud và DevOps đang thay đổi. Họ không chỉ vận hành hạ tầng mà còn thiết kế hệ thống và luồng làm việc mà các team khác sẽ sử dụng. Góc nhìn đó giúp em hình dung rõ hơn con đường nghề nghiệp mình có thể theo đuổi.
-
-![event22](https://aws-first-cloud-journey-six.vercel.app/4-eventparticipated/4.3-event3/3.4.jpg)
 
 #### 3. GenAIOps: DevOps for the AI Era
 Phần chuyển từ DevOps truyền thống sang GenAIOps rất thú vị. Các diễn giả kết nối nguyên lý DevOps với quy trình phát triển ứng dụng Generative AI và giải thích rằng dù workload là AI, các yếu tố như observability, kỷ luật vận hành và hạ tầng hỗ trợ vẫn vô cùng cần thiết.
 
 Những ví dụ liên quan đến Amazon Bedrock, Bedrock AgentCore, Langfuse và EKS làm cho nội dung trở nên rất thực tế. Em hiểu rằng hệ thống AI trong môi trường production cũng cần được giám sát, theo dõi trace và triển khai bài bản giống như bất kỳ hệ thống phần mềm nào khác.
 
-![event23](https://aws-first-cloud-journey-six.vercel.app/4-eventparticipated/4.3-event3/3.4.jpg)
-
 #### 4. Shipping Code in the Agentic Era
 Khi sự kiện chuyển sang chủ đề Agentic Era, trọng tâm là cách AI Agent đang thay đổi cách lập trình viên viết và đưa phần mềm ra môi trường vận hành.
 
 Em học được rằng AI đang dần trở thành một công cụ cộng tác trong quy trình phát triển chứ không chỉ là công cụ sinh mã. Ý tưởng multi-agent workflow đặc biệt ấn tượng vì cho thấy nhiều AI agent có thể phối hợp với nhau để xử lý các nhiệm vụ phức tạp. Điều này giúp em hiểu rõ hơn về cơ hội tăng năng suất khi làm việc với phần mềm theo hướng agent-based.
 
-![event24](https://aws-first-cloud-journey-six.vercel.app/4-eventparticipated/4.3-event3/3.4.jpg)
+![Trình diễn AWS Security Agent tại FCAJ Community Day](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.3-Event3/aws-security-agent.png)
 
 #### 5. CloudFront: The Foundation of Everything
 Phần cuối về Amazon CloudFront giúp em nhìn rộng hơn về kiến trúc edge. Trước đây em thường nghĩ CloudFront chỉ là một CDN để tăng tốc website. Sau buổi này, em hiểu rằng nó còn đóng vai trò lớn trong bảo mật, độ tin cậy và hiệu năng.

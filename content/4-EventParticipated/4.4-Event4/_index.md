@@ -1,6 +1,6 @@
 ---
 title: "Cloud Mastery #2"
-date: 2026-03-14
+date: 2026-04-04
 weight: 4
 chapter: false
 pre: " <b> 4.4. </b> "
@@ -10,7 +10,7 @@ pre: " <b> 4.4. </b> "
 
 ### Event Objectives
 
-The **Cloud Mastery 2026** workshop was designed to provide participants with a strong foundation in modern cloud engineering practices, focusing on three critical domains:
+The **Cloud Mastery #2** workshop was designed to provide participants with a strong foundation in modern cloud engineering practices, focusing on three critical domains:
 
 - Container orchestration with Kubernetes
 - High-concurrency system design using Elixir
@@ -102,7 +102,7 @@ Key insights included:
 
 This session highlighted how system reliability and scalability can be achieved through language and runtime design—not just infrastructure.
 
-![event41](https://media.discordapp.net/attachments/799671634012799019/1491237707848876042/CB3E6EA2-C47E-4CD0-ADA6-F84C0CB03C29.png?ex=69d6f6d7&is=69d5a557&hm=19acbf0de7d71ac517aa7f3838426b1f2fd54f4820fdfa22aac6860394fba0e0&=&format=webp&quality=lossless&width=800&height=800)
+![CloudFormation template session at Cloud Mastery #2](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.4-Event4/cloudformation-template.png)
 
 ---
 
@@ -147,7 +147,7 @@ Key concepts included:
 
 This session provided practical knowledge for building scalable and maintainable cloud infrastructure.
 
-![event42](https://media.discordapp.net/attachments/799671634012799019/1491237708327288842/152040D7-D343-4DCE-ACFB-7D9269C78566.jpg?ex=69d6f6d7&is=69d5a557&hm=87a3cfd29b1e07892e7498e250ebc760f46b332025459fb3c5ceeb3da8389cac&=&format=webp&width=600&height=800)
+![How AWS CloudFormation works](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.4-Event4/cloudformation-workflow.jpg)
 
 ---
 

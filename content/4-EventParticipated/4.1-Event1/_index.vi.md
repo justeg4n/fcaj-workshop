@@ -21,8 +21,6 @@ Phần workshop giúp em nhìn rõ hơn cách hiện đại hóa ứng dụng v�
 
 Điều em thấy hữu ích nhất là tư duy kết hợp giữa phân rã hệ thống, thiết kế hướng sự kiện (event-driven) và mô hình serverless. Em cũng học được cách các công cụ hỗ trợ lập trình bằng AI như Amazon Q Developer có thể giúp kỹ sư viết mã nhanh hơn, phát hiện lỗi sớm hơn và giảm bớt các công việc lặp đi lặp lại trong quá trình triển khai.
 
-![App-DB](https://media.discordapp.net/attachments/799671634012799019/1491231119960445128/image.png?ex=69d6f0b4&is=69d59f34&hm=30a7e2d6e5b33f9c2a9ecffad579aa6f82179de8952e0b1c485e4c3aac914497&=&format=webp&quality=lossless&width=1591&height=720)
-
 #### Storage và Data
 Một trong những phần gây ấn tượng nhất với em là nội dung về lưu trữ dữ liệu. Em nhận ra AWS đang cải tiến rất nhiều ở cách dữ liệu được lưu trữ, truy xuất và tối ưu. Các tính năng như intelligent tiering hay tìm kiếm vector cho thấy storage ngày nay không chỉ là nơi để “để dữ liệu”, mà còn gắn chặt với hiệu năng, phân tích dữ liệu và các workload AI.
 
@@ -35,8 +33,6 @@ Một điểm em nhớ rõ là hệ thống cloud phải đảm bảo tính ổn
 
 #### Networking và Security
 Phần networking và security cũng rất thực tế. Em học được rằng bảo vệ tại edge đang ngày càng quan trọng, nhất là với các ứng dụng hiện đại có người dùng phân tán và nhiều workload nhạy cảm. Các cải tiến về bảo mật CloudFront, định hướng bảo vệ trước các mối đe dọa trong tương lai, và các gói giá cố định đều cho thấy cloud đang tiến đến mô hình vận hành ổn định, dễ dự đoán và an toàn hơn.
-
-![Networking](https://media.discordapp.net/attachments/799671634012799019/1491237680049295471/71B448F2-CD19-40CA-A4D7-B07070C72703.jpg?ex=69d6f6d0&is=69d5a550&hm=fa15d6f804fd662883c36b3b0fecaeb97115372d14e0d8d68b7f96d31bb4e3ff&=&format=webp&width=930&height=930)
 
 #### Databases
 Phần cơ sở dữ liệu giúp em hiểu rằng tối ưu chi phí và tối ưu tốc độ truy xuất phải đi cùng nhau. AWS giới thiệu khả năng tiết kiệm chi phí cho RDS và DynamoDB nếu workload sử dụng đều đặn, đồng thời OpenSearch cũng trở nên thông minh hơn nhờ hỗ trợ GPU và khả năng hiểu truy vấn ngôn ngữ tự nhiên tốt hơn.
@@ -57,13 +53,11 @@ Bài học lớn nhất mà em rút ra là cloud architecture ngày nay không c
 
 ### Một số hình ảnh khi tham gia sự kiện
 
-- [Chèn ảnh sự kiện tại đây]
-- [Chèn ảnh giao lưu, networking tại đây]
-- [Chèn ảnh workshop/slides tại đây]
+![Ảnh nhóm tại văn phòng AWS](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.1-Event1/aws-office-group.jpg)
+
+![Ảnh người tham dự sự kiện AWS](https://justeg4n.github.io/fcaj-workshop/images/4-EventParticipated/4.1-Event1/aws-office-portrait.jpg)
 
 > Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
-
-![Final-event1](https://media.discordapp.net/attachments/799671634012799019/1491237706095661277/364C730A-E823-43A1-8899-E9D26F8D6193.jpg?ex=69d6f6d6&is=69d5a556&hm=9aefd71181cae4479a2830b56ea32a76d9f5c7f7ec550ef156238a441774d67a&=&format=webp&width=1421&height=800)
 
 ### Kết Luận
 
